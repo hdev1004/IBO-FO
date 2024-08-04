@@ -1,6 +1,4 @@
 VSCODE ESLint 플로그인 설치
-npm i -g eslint
-eslint --init
 출처 : https://velog.io/@dvisign/%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%98%95%EC%8B%9D-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-%EA%B0%9C%EB%B0%9C%EA%B8%B0-2-%EC%B4%88%EA%B8%B0-%EC%85%8B%ED%8C%852
 
 
