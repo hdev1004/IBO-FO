@@ -7,14 +7,14 @@ import ProfileSVG from '@/assets/header/profile.svg'
 
 <template>
   <section>
-    <div class="logo">로고</div>
-    <div class="profile">
+    <div class="header-logo">로고</div>
+    <div class="header-profile">
       <div class="profile-contents">
         <span class="profile-name">허광한 님</span>
         <img :src="ArrowBottomSVG" class="profile-btn" />
         <img :src="ProfileSVG" class="profile-img" />
       </div>
-      <img :src="AlarmSVG" class="alram" />
+      <img :src="AlarmSVG" class="profile-alaram" />
       <!-- 알람 활성화시, AlarmActiveSVG -->
     </div>
   </section>
