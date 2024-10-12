@@ -8,8 +8,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AppLayout: typeof import('./src/layouts/AppLayout.vue')['default']
-    'Baseblue.button': typeof import('./src/components/buttons/baseblue.button.vue')['default']
-    'BaseBlue.button': typeof import('./src/components/buttons/BaseBlue.button.vue')['default']
     BaseBlueButton: typeof import('./src/components/buttons/BaseBlueButton.vue')['default']
     BaseButton: typeof import('./src/components/BaseButton.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
