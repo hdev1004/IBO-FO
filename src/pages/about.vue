@@ -1,14 +1,4 @@
-<script setup lang="ts">
-useHead({
-  title: 'About - Vue Enterprise Boilerplate',
-  meta: [
-    {
-      name: 'description',
-      content: 'The about page for Vue Enterprise Boilerplate!'
-    }
-  ]
-})
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="about">

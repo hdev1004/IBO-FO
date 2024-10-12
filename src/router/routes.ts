@@ -1,4 +1,4 @@
-import { exampleRouter } from './example/exampleRouter';
+import { exampleRouter } from './example/exampleRouter'
 
 export default [
   {
@@ -6,6 +6,7 @@ export default [
     name: 'home',
     component: () => import('@/pages/index.vue')
   },
+
   {
     path: '/about',
     name: 'about',
@@ -14,6 +15,10 @@ export default [
     // which is lazy-loaded when the route is visited.
     component: () => import('@/pages/about.vue')
   },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/pages/login/login.vue')
+  },
   ...exampleRouter
-
 ]
