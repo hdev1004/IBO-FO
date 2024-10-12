@@ -5,13 +5,16 @@ interface Props {
   backgroundColor?: string
   color?: string
   text?: string
-  onClick?: () => void
+  fontSize?: string
+  fontWeight?: string
 }
 
 const alignStyle = {
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+  cursor: 'pointer',
+  borderRadius: '5px'
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -30,10 +33,11 @@ const props = withDefaults(defineProps<Props>(), {
       height: props.height,
       backgroundColor: props.backgroundColor,
       color: props.color,
+      fontSize: props.fontSize,
+      fontWeight: props.fontWeight,
 
       ...alignStyle
     }"
-    @click="props.onClick"
   >
     {{ props.text }}
   </section>

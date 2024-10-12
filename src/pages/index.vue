@@ -8,7 +8,7 @@ import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
     <div>Hello World</div>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
     <div>테스트 페이지 입니다</div>
-    <BaseBlueButton></BaseBlueButton>
+    <BaseBlueButton onclick="alert('test')"></BaseBlueButton>
   </AppLayout>
 </template>
 
