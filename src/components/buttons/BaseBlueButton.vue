@@ -1,0 +1,44 @@
+<script setup lang="ts">
+interface Props {
+  width?: string
+  height?: string
+  backgroundColor?: string
+  color?: string
+  text?: string
+  onClick?: () => void
+}
+
+const alignStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  width: '100px',
+  height: '40px',
+  text: '확인',
+  color: '#FFF',
+  backgroundColor: '#05153B'
+})
+</script>
+
+<template>
+  <section
+    :style="{
+      width: props.width,
+      height: props.height,
+      backgroundColor: props.backgroundColor,
+      color: props.color,
+
+      ...alignStyle
+    }"
+    @click="props.onClick"
+  >
+    {{ props.text }}
+  </section>
+</template>
+
+<style lang="scss" scoped>
+@import url('./BaseBlueButton.css');
+</style>

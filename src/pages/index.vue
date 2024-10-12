@@ -1,13 +1,5 @@
 <script setup lang="ts">
-useHead({
-  title: 'IBO',
-  meta: [
-    {
-      name: 'description',
-      content: 'Welcome to IBO!'
-    }
-  ]
-})
+import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
 </script>
 
 <template>
@@ -16,6 +8,7 @@ useHead({
     <div>Hello World</div>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
     <div>테스트 페이지 입니다</div>
+    <BaseBlueButton></BaseBlueButton>
   </AppLayout>
 </template>
 
