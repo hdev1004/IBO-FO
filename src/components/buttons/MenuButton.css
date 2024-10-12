@@ -1,0 +1,14 @@
+.menu__button {
+  height: 53px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu__button-text {
+  margin-top: 4px;
+  font-size: 12px;
+}
