@@ -10,6 +10,8 @@ declare module 'vue' {
     AppLayout: typeof import('./src/layouts/AppLayout.vue')['default']
     BaseBlueButton: typeof import('./src/components/buttons/BaseBlueButton.vue')['default']
     BaseButton: typeof import('./src/components/BaseButton.vue')['default']
+    Header: typeof import('./src/layouts/header.vue')['default']
+    Menu: typeof import('./src/layouts/menu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
