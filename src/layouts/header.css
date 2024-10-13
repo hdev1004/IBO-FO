@@ -1,32 +1,60 @@
-section {
+header {
   height: 50px;
   border-bottom: 1px solid #dddddd;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header-logo {
+.header__logo {
   width: 50px;
   height: 40px;
   margin-left: 2%;
   /* background-color: rgb(226, 124, 0); */
 }
-.header-profile {
+.header__profile {
   display: flex;
   margin-right: 2%;
 }
-.header-profile > .profile-alaram {
+.header__profile > .header__profile-alaram {
   cursor: pointer;
-  margin-bottom: 4px;
 }
-.profile-contents > .profile-name {
+.profile__contents > .profile__contents-name {
   margin-right: 10px;
+  display: inline-block;
 }
-.profile-contents > .profile-btn {
+.profile__contents > .profile__contents-toggleBtn {
   margin-right: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   cursor: pointer;
 }
-.profile-contents > .profile-img {
+/* 드록다운 메뉴 활성화 */
+.profile__contents > .profile__contents-toggleBtn.active {
+  transform: rotate(180deg);
+}
+.header__profile-img {
   margin-right: 20px;
+}
+
+section {
+  position: absolute;
+  top: 50px;
+  right: 88px;
+  width: 150px;
+  border-radius: 5px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.header__toggleMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 3px;
+  text-align: center;
+  font-size: 14px;
+}
+.header__toggleMenu li {
+  padding: 12px 8px 12px 8px;
+  cursor: pointer;
+}
+.header__toggleMenu li:nth-child(1) {
+  border-bottom: 1px solid #dddddd;
 }
