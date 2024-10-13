@@ -26,6 +26,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('/fonts/Pretendard-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   font-family: 'Pretendard';
 }

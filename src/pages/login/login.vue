@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import PwdIconSVG from '@/assets/login/pwd.svg'
 import PwdOffIconSVG from '@/assets/login/pwd-off.svg'
+
+const router = useRouter()
+const login = () => {
+  router.push({
+    path: '/'
+  })
+}
 </script>
 
 <template>
@@ -14,10 +21,14 @@ import PwdOffIconSVG from '@/assets/login/pwd-off.svg'
           <input id="login-input" type="password" placeholder="비밀번호를 입력해주세요" />
           <img :src="PwdIconSVG" class="pwd-on" />
         </div>
-        <button id="login-button" type="submit">로그인하기</button>
+        <button id="login-button" type="submit" @click="login()">로그인하기</button>
       </div>
     </div>
-    <div>asd</div>
+    <div class="footer-container">
+      <span class="footer-con1">이용약관</span>
+      <span class="footer-con2">개인정보처리방침</span>
+      <p class="footer-main">© 2024 IBO</p>
+    </div>
   </div>
 </template>
 
@@ -27,6 +38,35 @@ import PwdOffIconSVG from '@/assets/login/pwd-off.svg'
   background-color: #eff3f6;
   width: 100vw;
   height: 100vh;
+}
+
+.footer-main {
+  color: #717179;
+  font-family: Pretendard-Regular;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.footer-con1 {
+  text-decoration: underline;
+  color: #717179;
+  font-family: Pretendard-Regular;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.footer-con2 {
+  text-decoration: underline;
+  color: #717179;
+  font-family: Pretendard-Regular;
+  font-size: 14px;
+}
+
+.footer-container {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 .pwd-container {
