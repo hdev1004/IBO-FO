@@ -1,0 +1,25 @@
+{
+  "home": {
+    "인사정보관리": "/empInfo",
+    "인사기록카드": "/empRecord",
+    "조직관리": "/groupManage",
+    "인사명령": "/personalAppointment"
+  },
+  "schedule": {
+    "일정관리": "/aa"
+  },
+  "attendance": {
+    "근무/휴가 처리": "/aa",
+    "내 신청 문서": "/bb",
+    "내 결재 문서": "/cc",
+    "내 참조 문서": "/dd"
+  },
+  "payment": {
+    "급여대장": "/aa",
+    "월급 명세서": "/bb"
+  },
+  "retired": {
+    "퇴직금 산정": "/aa"
+  },
+  "faq": {}
+}

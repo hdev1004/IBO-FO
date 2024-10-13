@@ -1,4 +1,5 @@
 import { exampleRouter } from './example/exampleRouter'
+import { homeRouter } from './home'
 
 export default [
   {
@@ -21,5 +22,6 @@ export default [
     component: () => import('@/pages/login/login.vue')
   },
 
-  ...exampleRouter
+  ...exampleRouter,
+  ...homeRouter
 ]
