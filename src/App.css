@@ -41,3 +41,13 @@ body {
   padding: 0px;
   margin: 0px;
 }
+
+.contents {
+  display: flex;
+}
+
+.pages {
+  width: 100%;
+  height: calc(100vh - 51px);
+  background-color: #eff3f6;
+}

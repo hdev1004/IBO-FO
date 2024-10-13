@@ -8,6 +8,10 @@ const props = defineProps({
   currentMenu: {
     type: String,
     default: 'home'
+  },
+  menuIsShow: {
+    type: Boolean,
+    defualt: false
   }
 })
 
@@ -22,7 +26,7 @@ console.log('Current : ', props.currentMenu)
 
 <template>
   <section
-    class="submenu"
+    :class="menuIsShow ? 'submenu' : 'submenu-hidden'"
     v-if="props.currentMenu && Object.keys(menuData[props.currentMenu]).length > 0"
   >
     <div

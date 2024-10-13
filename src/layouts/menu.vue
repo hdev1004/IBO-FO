@@ -8,10 +8,14 @@ import DeleteSvg from '@/assets/menu/DeleteSvg.vue'
 import QuerySvg from '@/assets/menu/QuerySvg.vue'
 import MenuButton from '@/components/buttons/MenuButton.vue'
 import MenuSubmenu from './menuSubmenu.vue'
+import { useMenuOpenStore } from '@/stores/menu'
+
+const openStore = useMenuOpenStore()
 
 //현재 메뉴 변수
 let currentMenu = ref('')
 const clickMenu = (type: string) => {
+  openStore.setIsShow(true)
   currentMenu.value = type
 }
 </script>
@@ -60,7 +64,7 @@ const clickMenu = (type: string) => {
     </section>
 
     <section>
-      <MenuSubmenu :currentMenu="currentMenu"></MenuSubmenu>
+      <MenuSubmenu :currentMenu="currentMenu" :menuIsShow="openStore.getIsOpen()"></MenuSubmenu>
     </section>
   </section>
 </template>
