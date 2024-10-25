@@ -17,6 +17,11 @@ export const homeRouter = [
   {
     path: '/home/personalAppointment',
     name: 'home-personalAppointment',
-    component: () => import('@/pages/home/PersonalAppointment.vue')
+    component: () => import('@/pages/home/personalAppointment.vue')
+  },
+  {
+    path: '/home/empInfoReg',
+    name: 'home-empInfoReg',
+    component: () => import('@/pages/home/empInfoReg.vue')
   }
 ]
