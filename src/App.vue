@@ -2,23 +2,33 @@
 import Header from '@/layouts/header.vue'
 import Menu from '@/layouts/menu.vue'
 import { useRoute } from 'vue-router'
+import { useMenuOpenStore } from './stores/menu'
+
+const openStore = useMenuOpenStore()
+
 const route = useRoute()
 
 console.log(route.fullPath)
 </script>
 
 <template>
+  <!-- 로그인 아닐경우 페이지 분리-->
   <div v-if="route.path !== '/login'">
     <section>
       <Header></Header>
     </section>
 
-    <section>
+    <section class="contents">
       <Menu></Menu>
+      <div class="pages" @click="openStore.setIsShow(false)">
+        <RouterView />
+      </div>
     </section>
   </div>
 
-  <RouterView />
+  <div v-else>
+    <RouterView />
+  </div>
 </template>
 
 <style lang="scss">
