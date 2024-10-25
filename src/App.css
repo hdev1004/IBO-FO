@@ -47,7 +47,9 @@ body {
 }
 
 .pages {
+  min-width: 1280px;
   width: 100%;
   height: calc(100vh - 51px);
   background-color: #eff3f6;
+  overflow: auto;
 }
