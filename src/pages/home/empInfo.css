@@ -1,0 +1,62 @@
+/* 전체 영역 */
+.empInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 80px;
+  border: 1px solid #d2d2d2;
+}
+/*  인사정보검색 영역 */
+.empInfo__searchInfo {
+  min-width: 300px;
+  height: 630px;
+  margin-right: 53px;
+  background-color: #fff;
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+}
+.empInfo__searchInfo__empStatus,
+.empInfo__searchInfo__empSearch,
+.empInfo__searchInfo__empCards {
+  margin: 0 auto;
+}
+.empInfo__searchInfo__empStatus {
+  width: 250px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  & span {
+    font-size: 11px;
+    color: #717179;
+  }
+}
+.v-line {
+  border-left: 1px solid #dddddd;
+  height: 10px;
+}
+
+.empInfo__searchInfo__empSearch {
+  width: 250px;
+  height: 24px;
+  position: relative;
+  & input {
+    width: 100%;
+  }
+}
+.empInfo__searchInfo__empSearch-searchBtn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+/* 인사정보 영역*/
+.empInfo_mainInfo {
+  width: 100%;
+  height: 630px;
+  border: 1px solid palegoldenrod;
+}
