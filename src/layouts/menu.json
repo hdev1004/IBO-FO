@@ -6,7 +6,7 @@
     "인사명령": "/personalAppointment"
   },
   "schedule": {
-    "일정관리": "/aa"
+    "일정관리": "/scheduleManager"
   },
   "attendance": {
     "근무/휴가 처리": "/aa",
