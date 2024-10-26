@@ -4,6 +4,7 @@
   height: calc(100vh - 51px);
   position: absolute;
   background-color: white;
+  z-index: 100;
 }
 
 .submenu-hidden {
