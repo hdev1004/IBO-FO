@@ -12,5 +12,36 @@
   background-color: white;
   border: 1px solid lightgray;
   width: 100%;
-  height: calc(100% - 26px);
+  height: 100vh;
+}
+
+.schedule-body-header-headquarters {
+  margin-left: 43px;
+  margin-top: 20px;
+  gap: 5px;
+  height: 45px;
+  display: flex;
+  gap: 20px;
+  width: 40%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.schedule-headquarters-group {
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-headquarters {
+  font-size: 13px;
+  gap: 10px;
+  display: flex;
+}
+
+.headquarters--color {
+  width: 20px;
+  height: 20px;
+  background-color: #d4e2ff;
+  border-radius: 5px;
 }

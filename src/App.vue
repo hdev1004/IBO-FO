@@ -20,9 +20,9 @@ console.log(route.fullPath)
 
     <section class="contents">
       <Menu></Menu>
-      <div class="pages" @click="openStore.setIsShow(false)">
+      <el-scrollbar class="pages" @click="openStore.setIsShow(false)">
         <RouterView />
-      </div>
+      </el-scrollbar>
     </section>
   </div>
 

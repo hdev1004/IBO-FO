@@ -1,4 +1,3 @@
-import { eventNames } from 'process'
 import BaseTabVue from './BaseTab.vue'
 
 export default {
