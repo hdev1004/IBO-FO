@@ -1,12 +1,6 @@
 import type { StorybookConfig } from '@storybook/vue3-vite'
 
 const config: StorybookConfig = {
-  staticDirs: [
-    {
-      from: '/public/fonts',
-      to: '/fonts'
-    }
-  ],
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
     '@storybook/addon-onboarding',
