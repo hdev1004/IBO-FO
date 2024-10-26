@@ -1,4 +1,26 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const items = ['정규직', '계약직']
+const value = ref(0)
+const state = ref(false)
+const header = ref<HTMLElement | null>(null)
+
+function toggleListener(active: boolean): void {
+  active
+    ? window.addEventListener('mousedown', mouseDownOutside)
+    : window.removeEventListener('mousedown', mouseDownOutside)
+}
+
+function mouseDownOutside(e: MouseEvent): void {
+  const isOutside = header.value && !header.value.contains(e.target as Node)
+
+  if (isOutside) toggleListener((state.value = false))
+}
+
+function mouseDownItem(index: number): void {
+  value.value = index
+  toggleListener((state.value = false))
+}
+</script>
 
 <template>
   <div class="empInfoReg-title">
@@ -20,17 +42,63 @@
       </p>
       <button class="insert-file">파일 선택</button>
     </div>
+    <div class="left-gropInfo">
+      <p>그룹 정보</p>
+      <form>
+        <div>
+          <div class="empInfo-reg-name">
+            <label>구분</label>
+            <select>
+              <option v-for="(item, i) in items" in @mousedown.prevent="() => mouseDownItem(i)">
+                {{ items }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
   <div class="right">
     <div class="right-inner">
       <p>직원 정보</p>
       <form>
-        <label>성명</label>
-        <input type="text" /> <br />
-        <label>성별</label>
-        <input type="radio" value="male" />남자 <input type="radio" value="female" />여자 <br />
-        <label>거주구분</label>
-        <input type="radio" value="local" />내국인 <input type="radio" value="foreigner" />외국인
+        <div class="empInfo-reg-name">
+          <label>성명</label>
+          <input type="text" /><br />
+        </div>
+        <div class="empInfo-reg-type">
+          <label>성별</label>
+          <input type="radio" value="male" />남자 <input type="radio" value="female" />여자<br />
+        </div>
+        <div class="empInfo-reg-type2">
+          <label>거주구분</label>
+          <input type="radio" value="local" />내국인
+          <input type="radio" value="foreigner" />외국인<br />
+        </div>
+        <div class="empInfo-reg-date">
+          <label>생년월일</label>
+          <input type="text" /><br />
+        </div>
+        <div class="empInfo-reg-mail">
+          <label>이메일</label>
+          <input type="text" /><br />
+        </div>
+        <div class="empInfo-reg-tel">
+          <label>전화번호</label>
+          <input type="text" /><br />
+        </div>
+        <div class="empInfo-reg-emer">
+          <label>비상 연락망</label>
+          <input type="text" /><br />
+        </div>
+        <div class="empInfo-reg-add">
+          <label>주소</label>
+          <input type="text" /> <button>도로명 검색</button><br />
+          <label>상세주소</label>
+          <input type="text" /> <br />
+          <label>우편번호</label>
+          <input type="text" id="post-number" readonly /><br />
+        </div>
       </form>
     </div>
   </div>
@@ -40,6 +108,39 @@
 @media (min-width: 1024px) {
   .empInfoReg-title {
     background-color: aqua;
+  }
+
+  .empInfo-reg-emer > label {
+    font-family: Pretendard-Bold;
+    color: #05153b;
+    font-size: 14px;
+    margin-right: 15px;
+  }
+
+  .empInfo-reg-mail > label {
+    font-family: Pretendard-Bold;
+    color: #05153b;
+    font-size: 14px;
+    margin-right: 43px;
+  }
+
+  .empInfo-reg-type2 > label,
+  .empInfo-reg-date > label,
+  .empInfo-reg-tel > label,
+  .empInfo-reg-add > label:not(:first-child) {
+    font-family: Pretendard-Bold;
+    color: #05153b;
+    font-size: 14px;
+    margin-right: 31px;
+  }
+
+  .empInfo-reg-name > label,
+  .empInfo-reg-type > label,
+  .empInfo-reg-add > label:first-child {
+    font-family: Pretendard-Bold;
+    color: #05153b;
+    font-size: 14px;
+    margin-right: 55px;
   }
 
   .insert-file {
@@ -74,7 +175,17 @@
     border-radius: 8px;
     border: 1px #d2d2d2 solid;
     width: 530px;
-    height: 338px;
+    height: 310px;
+    background-color: white;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    margin-bottom: 30px;
+  }
+
+  .left-gropInfo {
+    border-radius: 8px;
+    border: 1px #d2d2d2 solid;
+    width: 530px;
+    height: 275px;
     background-color: white;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   }
