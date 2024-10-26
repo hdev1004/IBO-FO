@@ -9,6 +9,7 @@
 }
 
 .schedule-body {
+  position: relative;
   background-color: white;
   border: 1px solid lightgray;
   width: 100%;
@@ -44,4 +45,39 @@
   height: 20px;
   background-color: #d4e2ff;
   border-radius: 5px;
+}
+
+.schedule-date {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 35px;
+
+  img {
+    cursor: pointer;
+  }
+}
+
+.schedule-date--text {
+  width: 150px;
+  text-align: center;
+  color: #05153b;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.schedule-date-button {
+  width: 51px;
+  height: 27px;
+  cursor: pointer;
+  font-size: 12px;
+  background-color: #05153b;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 27px;
+  position: absolute;
+  margin-top: -4px;
+  margin-left: 300px;
 }

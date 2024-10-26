@@ -48,7 +48,13 @@ const tabChange = (value: any) => {
             </div>
           </div>
         </div>
-        <div>middle</div>
+        <div class="schedule-date">
+          <img src="@/assets/schedule/left.svg" />
+          <div class="schedule-date--text">2024.10.26</div>
+          <img src="@/assets/schedule/right.svg" />
+
+          <div class="schedule-date-button">오늘</div>
+        </div>
         <div>right</div>
       </div>
 
