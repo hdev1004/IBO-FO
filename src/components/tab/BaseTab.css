@@ -49,6 +49,7 @@
 }
 
 .tab-hideline {
+  z-index: 10;
   position: absolute;
   width: 98px;
   height: 5px;
