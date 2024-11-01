@@ -121,8 +121,82 @@
 }
 
 /* 인사정보 영역*/
-.empInfo_mainInfo {
+.empInfo__mainInfo {
   width: 846px;
+}
+.empInfo__mainInfo__profile {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 290px;
+  display: flex;
+  background-color: #a6bbce;
+  border-radius: 5px;
+  /* align-items: center; */
+}
+.empInfo__mainInfo__profile__img {
+  width: 136px;
+  height: 136px;
+  object-fit: cover;
+  margin-left: 50px;
+}
+.empInfo__mainInfo__profile__info {
+  width: 250px;
+  height: 150px;
+  margin-left: 20px;
+  color: #fff;
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & li {
+      font-family: 'Pretendard-Bold';
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.empInfo__mainInfo__profile__info__name {
+  font-size: 24px;
+  font-family: 'Pretendard-Bold';
+  margin: 0px;
+  margin-bottom: 30px;
+}
+.empInfo__mainInfo__profile__info__job,
+.empInfo__mainInfo__profile__info__dept,
+.empInfo__mainInfo__profile__info__role {
+  font-size: 17px;
+  margin-left: 20px;
+}
 
-  border: 1px solid palegoldenrod;
+.empInfo__mainInfo__infoWrap {
+  width: 96%;
+  height: 372px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.empInfo__mainInfo__infoWrap__infoTable {
+  padding: 32px;
+  & table {
+    width: 100%;
+    height: 306px;
+    font-size: 14px;
+    border-collapse: collapse;
+  }
+  & th,
+  td {
+    border: 1px solid #d2d2d2;
+  }
+  & th {
+    width: 15%;
+    background-color: #f1f1f1;
+    text-align: left;
+    text-indent: 10px;
+    font-family: 'Pretendard-Medium';
+    font-weight: normal;
+  }
+  & td {
+    text-indent: 10px;
+  }
 }
