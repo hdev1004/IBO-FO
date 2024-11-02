@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import { useSchduleStore } from '@/stores/schdule'
-
 const year = ref(2024) //현재 년도
 const month = ref(new Date().getMonth()) // 현재 월
 const calendar = ref<Array<Array<number>>>([[]]) //달력 저장
-const useSchdule = useSchduleStore()
 
 function generateMonthlyCalendar(year: number, month: number) {
   const daysInMonth = new Date(year, month, 0).getDate() // 해당 월의 일 수 계산
@@ -69,13 +66,6 @@ const load = () => {
   console.log(calendar.value)
 }
 
-/**
- * 일정등록 클릭
- */
-const schduleAdd = () => {
-  useSchdule.setIsSchedule(true)
-}
-
 load()
 </script>
 
@@ -126,7 +116,7 @@ load()
 
         <div class="schedule-date-button" @click="todayMonth">오늘</div>
       </div>
-      <div class="schedule-add" @click="schduleAdd">일정등록</div>
+      <div class="schedule-add">일정등록</div>
     </div>
 
     <div class="schedule-calendar">
@@ -177,5 +167,5 @@ load()
 </template>
 
 <style lang="scss" scoped>
-@import url('./scheduleManagerWork.css');
+@import url('./scheduleManagerVacation.css');
 </style>
