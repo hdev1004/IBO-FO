@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', () => {
+export const useCounterStore = defineStore('useCounterStore', () => {
   const count = ref(0)
 
   //함수를 하든 변수로 하든 상관이 없음
