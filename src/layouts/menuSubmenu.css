@@ -5,10 +5,18 @@
   position: absolute;
   background-color: white;
   z-index: 100;
+  transition: 0.3s;
 }
 
 .submenu-hidden {
-  display: none;
+  width: 220px;
+  margin-left: -221px;
+  border-right: 1px solid #ddd;
+  height: calc(100vh - 51px);
+  position: absolute;
+  background-color: white;
+  z-index: 100;
+  transition: 0.3s;
 }
 
 .menuSubmenu__card {

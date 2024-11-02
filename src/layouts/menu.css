@@ -3,6 +3,7 @@
 }
 
 .menu__menu {
+  z-index: 110;
   width: 80px;
   height: calc(100vh - 51px);
   background-color: white;
