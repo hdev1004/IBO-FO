@@ -1,0 +1,197 @@
+.empInfoReg-title {
+  background-color: aqua;
+}
+
+.final-button {
+  float: right;
+}
+
+.empInfo-reg-name > input,
+.empInfo-reg-date > input,
+.empInfo-reg-mail > input,
+.empInfo-reg-tel > input,
+.empInfo-reg-emer > input {
+  border-radius: 8px;
+  border: 1px #d2d2d2 solid;
+  width: 180px;
+  height: 20px;
+  background-color: white;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.empInfo-reg-add > input {
+  border-radius: 8px;
+  border: 1px #d2d2d2 solid;
+  width: 300px;
+  height: 20px;
+  background-color: white;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.empInfo-reg-add > button {
+  width: 130px;
+  height: 30px;
+  background-color: #05153b;
+  font-family: Pretendard-Regular;
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+}
+
+.empInfo-reg-sex,
+.empInfo-reg-area {
+  margin-bottom: 15px;
+}
+
+.empInfo-reg-cate > label,
+.empInfo-reg-empnumber > label,
+.empInfo-reg-position > label,
+.empInfo-reg-belonging > label {
+  font-family: Pretendard-Bold;
+  color: #05153b;
+  font-size: 14px;
+  margin-right: 45px;
+}
+
+.empInfo-reg-belonging > #cntr,
+.empInfo-reg-belonging > #team,
+.empInfo-reg-belonging > #part {
+  width: 110px;
+  margin-right: 10px;
+}
+
+.empInfo-reg-join > label {
+  font-family: Pretendard-Bold;
+  color: #05153b;
+  font-size: 14px;
+  margin-right: 33px;
+}
+
+.empInfo-reg-emer > label {
+  font-family: Pretendard-Bold;
+  color: #05153b;
+  font-size: 14px;
+  margin-right: 16px;
+}
+
+.empInfo-reg-mail > label {
+  font-family: Pretendard-Bold;
+  color: #05153b;
+  font-size: 14px;
+  margin-right: 43px;
+}
+
+.empInfo-reg-area > label,
+.empInfo-reg-date > label,
+.empInfo-reg-tel > label,
+.empInfo-reg-add > label:not(:first-child) {
+  font-family: Pretendard-Bold;
+  color: #05153b;
+  font-size: 14px;
+  margin-right: 31px;
+}
+
+.empInfo-reg-name > label,
+.empInfo-reg-sex > label,
+.empInfo-reg-add > label:first-child {
+  font-family: Pretendard-Bold;
+  color: #05153b;
+  font-size: 14px;
+  margin-right: 55px;
+}
+
+.insert-file {
+  background-color: white;
+  width: 100px;
+  height: 35px;
+  border: 1px #d2d2d2 solid;
+  border-radius: 5px;
+}
+
+.inner-cntn1 {
+  font-family: Pretendard-Bold;
+  color: #05153b;
+  font-size: 14px;
+}
+
+.inner-cntn2 {
+  font-family: Pretendard-Regular;
+  color: #717179;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.inner-cntn3 {
+  font-family: Pretendard-SemiBold;
+  color: red;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.left-inner {
+  border-radius: 8px;
+  border: 1px #d2d2d2 solid;
+  width: 530px;
+  height: 310px;
+  background-color: white;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  margin-bottom: 30px;
+}
+
+.left-gropInfo {
+  border-radius: 8px;
+  border: 1px #d2d2d2 solid;
+  width: 530px;
+  height: 275px;
+  background-color: white;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.left-inner > input {
+  width: 160px;
+  height: 220px;
+  border: 1px #d2d2d2 solid;
+  border-radius: 8px;
+  outline: none;
+  float: left;
+}
+
+.inner-title {
+  font-family: Pretendard-Bold;
+  color: #05153b;
+  font-size: 16px;
+}
+
+.left {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  background-color: ivory;
+}
+
+.right {
+  width: 50%;
+  float: right;
+  box-sizing: border-box;
+  background-color: yellowgreen;
+}
+
+.right-inner {
+  border-radius: 8px;
+  border: 1px #d2d2d2 solid;
+  width: 743px;
+  height: 617px;
+  background-color: white;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.right-inner > p {
+  font-family: Pretendard-Bold;
+  color: #05153b;
+  font-size: 16px;
+}
