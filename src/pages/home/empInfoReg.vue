@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
+import BaseWhiteButton from '@/components/buttons/BaseWhiteButton.vue'
 </script>
 
 <template>
@@ -9,7 +10,7 @@ import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
   <div class="left">
     <div class="left-inner">
       <p class="inner-title">프로필 사진</p>
-      <input placeholder="사진을 첨부해주세요!" readonly />
+      <input class="view-file" placeholder="사진을 첨부해주세요!" readonly />
       <p class="inner-cntn1">프로필 사진을 첨부해주세요!</p>
       <p class="inner-cntn2">
         첨부하는 사진은 직원 등록 및 확인용으로 사용됩니다.<br />
@@ -22,8 +23,9 @@ import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
       </p>
       <button class="insert-file">파일 선택</button>
     </div>
+
     <div class="left-gropInfo">
-      <p>그룹 정보</p>
+      <p class="inner-title">그룹 정보</p>
       <form>
         <div>
           <div class="empInfo-reg-cate">
@@ -63,6 +65,7 @@ import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
       </form>
     </div>
   </div>
+
   <div class="right">
     <div class="right-inner">
       <p>직원 정보</p>
@@ -106,8 +109,14 @@ import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
           <input style="width: 100px" type="text" id="post-number" readonly /><br />
         </div>
         <div class="final-button">
-          <button id="emp-reset">초기화</button>
-          <BaseBlueButton width="100px" height="30px" text="등록"></BaseBlueButton>
+          <BaseWhiteButton
+            width="90px"
+            height="30px"
+            font-size="14px"
+            text="초기화"
+            style="margin-right: 20px"
+          ></BaseWhiteButton>
+          <BaseBlueButton width="90px" height="30px" font-size="14px" text="등록"></BaseBlueButton>
         </div>
       </form>
     </div>
