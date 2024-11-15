@@ -35,13 +35,15 @@ header {
   margin-right: 20px;
 }
 
-section {
+.header__toggleMenu {
   position: absolute;
   top: 50px;
   right: 88px;
   width: 150px;
   border-radius: 5px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  z-index: 999;
+  background-color: #fff;
 }
 
 .header__toggleMenu ul {

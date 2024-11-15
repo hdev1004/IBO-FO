@@ -4,10 +4,27 @@ import ArrowBottomSVG from '@/assets/home/arrow-bottom.svg'
 import SearchProfileSVG from '@/assets/home/home_searchProfile.svg'
 import MainProfileSVG from '@/assets/home/home_mainProfile.svg'
 import { el } from 'element-plus/es/locales.mjs'
+import BaseTab from '@/components/tab/BaseTab.vue'
+import infoTable from './empInfoTab/infoTable.vue'
+import financeTable from './empInfoTab/financeTable.vue'
+import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
+import BaseWhiteButton from '@/components/buttons/BaseWhiteButton.vue'
+
+let tabs = ['기본정보', '급여정보']
+
+let nowTab = ref({
+  tab: '기본정보',
+  idx: 0
+})
+
+const tabChange = (value: any) => {
+  console.log(value)
+  nowTab.value = value
+}
 </script>
 
 <template>
-  <BaseTitle text="인사정보관리" style="margin-top: 80px; margin-left: 80px"></BaseTitle>
+  <BaseTitle text="인사정보관리" style="margin-top: 60px; margin-left: 100px"></BaseTitle>
   <main class="empInfo">
     <section class="empInfo__searchInfo">
       <div class="empInfo__searchInfo__empStatus">
@@ -22,6 +39,7 @@ import { el } from 'element-plus/es/locales.mjs'
         <img :src="SearchSVG" class="empInfo__searchInfo__empSearch-searchBtn" />
       </div>
 
+      <!-- 등록된 사원 정보가 없으면 "등록된 정보가 없습니다." 로 보여져야 함함 -->
       <article class="empInfo__searchInfo__empCards">
         <div class="empInfo__searchInfo__empCards__ordering">
           <span>등록순</span>
@@ -129,56 +147,35 @@ import { el } from 'element-plus/es/locales.mjs'
           </ul>
         </div>
       </figure>
+
       <article class="empInfo__mainInfo__infoWrap">
-        <!-- <ul class="empInfo__mainInfo__infoWrap__tabMenu">
-          <li><button class="empInfo__mainInfo__infoWrap__tabMenu-basic">기본정보</button></li>
-          <li><button class="empInfo__mainInfo__infoWrap__tabMenu-salary">급여정보</button></li>
-        </ul>
-        <div class="empInfo__mainInfo__infoWrap__modifyBtns">
-          <button class="empInfo__mainInfo__infoWrap__modifyBtns-registertBtn">등록</button>
-          <button class="empInfo__mainInfo__infoWrap__modifyBtns-edittBtn">수정</button>
-        </div> -->
-        <div class="empInfo__mainInfo__infoWrap__infoTable">
-          <table>
-            <tbody>
-              <tr>
-                <th style="border-radius: 5px 0px 0px 0px">성명 *</th>
-                <td>허광한</td>
-                <th>내/외국인 구분</th>
-                <td>내국인/대한민국</td>
-              </tr>
-              <tr>
-                <th>입사년월일 *</th>
-                <td>2024.09.13</td>
-                <th>주민등록번호 *</th>
-                <td>19901031-1927492</td>
-              </tr>
-              <tr>
-                <th>직원구분</th>
-                <td>사원</td>
-                <th>퇴사년월일</th>
-                <td>-</td>
-              </tr>
-              <tr>
-                <th>내부번호</th>
-                <td>234-2323</td>
-                <th>부서</th>
-                <td>Product Service</td>
-              </tr>
-              <tr>
-                <th>휴대폰번호 *</th>
-                <td>010-2432-2344</td>
-                <th>직급</th>
-                <td>사원</td>
-              </tr>
-              <tr>
-                <th>주소</th>
-                <td>경기도 고양시 어디동 어디아파트 2동 917호</td>
-                <th>이메일</th>
-                <td>gjrhkdgks@naver.com</td>
-              </tr>
-            </tbody>
-          </table>
+        <BaseTab :tabs="tabs" @tabChange="tabChange"></BaseTab>
+        <div class="empInfo__mainInfo__infoWrap-btns">
+          <BaseBlueButton text="등록" style="margin-right: 12px"></BaseBlueButton>
+          <BaseWhiteButton text="수정"></BaseWhiteButton>
+        </div>
+        <!-- 탭 메뉴에 따라 보여질 테이블이 다름 -->
+        <div class="empInfo__mainInfo__infoWrap-slide">
+          <section
+            class="empInfo__mainInfo__infoWrap__body"
+            :class="
+              nowTab.tab === '기본정보'
+                ? 'empInfo__mainInfo__infoWrap__body-show'
+                : 'empInfo__mainInfo__infoWrap__body-hidden'
+            "
+          >
+            <infoTable></infoTable>
+          </section>
+          <section
+            class="empInfo__mainInfo__infoWrap__body"
+            :class="
+              nowTab.tab === '급여정보'
+                ? 'empInfo__mainInfo__infoWrap__body-show'
+                : 'empInfo__mainInfo__infoWrap__body-hidden'
+            "
+          >
+            <financeTable></financeTable>
+          </section>
         </div>
       </article>
     </section>

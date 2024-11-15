@@ -2,48 +2,46 @@
 .empInfo {
   display: flex;
   justify-content: space-between;
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-bottom: 80px;
-  height: calc(100vh - 271px);
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 60px;
+  max-width: 100%;
+  height: calc(100vh - 231px);
 }
 
 /*  인사정보검색 영역 */
 .empInfo__searchInfo {
-  min-width: 300px;
-  /* height: 100%; */
-  height: 674px;
+  min-width: 483px;
+  height: 820px;
   background-color: #fff;
   border: 1px solid #d2d2d2;
   border-radius: 5px;
   justify-items: center;
 }
 .empInfo__searchInfo__empStatus {
-  width: 250px;
-  /* height: 3.62%; */
-  height: 24px;
+  width: 88%;
+  height: 5%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 10%;
+  margin-top: 6%;
   margin-bottom: 4%;
   border: 1px solid #d2d2d2;
   border-radius: 5px;
   & span {
-    font-size: 11px;
+    font-size: 14px;
     color: #717179;
   }
 }
 .v-line {
   border-left: 1px solid #dddddd;
-  height: 10px;
+  height: 16px;
 }
 
 .empInfo__searchInfo__empSearch {
-  width: 250px;
-  /* height: 3.62%; */
-  height: 24px;
-  margin-bottom: 7.8%;
+  width: 88%;
+  height: 5%;
+  margin-bottom: 8%;
   position: relative;
   & input {
     width: 100%;
@@ -52,39 +50,39 @@
     border: 1px solid #dddddd;
     border-radius: 5px;
     text-indent: 13px;
-    font-size: 11px;
+    font-size: 14px;
   }
 }
 .empInfo__searchInfo__empSearch-searchBtn {
   position: absolute;
   right: 13px;
-  top: 7px;
+  top: 33%;
   cursor: pointer;
 }
 
 .empInfo__searchInfo__empCards {
-  width: 250px;
-  height: 78%;
-  margin-bottom: 10%;
+  width: 88%;
+  height: 75%;
+  margin-bottom: 6%;
 }
 .empInfo__searchInfo__empCards__ordering {
-  margin-bottom: 4px;
+  margin-bottom: 4%;
   display: flex;
   justify-content: flex-end;
   & span {
-    font-size: 10px;
+    font-size: 13px;
     color: #717179;
     margin-right: 5px;
   }
 }
 .empInfo__searchInfo__empCards__cards {
-  width: 250px;
-  height: 100%;
+  max-height: 99%;
+  width: 100%;
 }
 .empInfo__searchInfo__empCards__card {
   margin-bottom: 6%;
-  width: 210px;
-  height: 11.4%;
+  width: 90%;
+  height: 90px;
   padding: 10px 12px;
   border: 1px solid #dddddd;
   border-radius: 5px;
@@ -94,27 +92,32 @@
 }
 .empInfo__searchInfo__empCards__card__item {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .empInfo__searchInfo__empCards__card__item__profile {
-  margin: 0px;
+  margin: 16px 10px;
+  & img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
 }
 .empInfo__searchInfo__empCards__card__item__info {
-  width: 70%;
+  width: 60%;
   & p {
     margin: 0px;
   }
   & p:nth-child(1) {
-    font-size: 10px;
+    font-size: 16px;
     margin-bottom: 3%;
   }
   & p:nth-child(2) {
-    font-size: 9px;
+    font-size: 14px;
     margin-bottom: 3%;
   }
   & p:nth-child(4) {
-    font-size: 9px;
+    font-size: 12px;
     color: #717179;
     margin: 0px;
   }
@@ -122,17 +125,19 @@
 
 /* 인사정보 영역*/
 .empInfo__mainInfo {
-  width: 846px;
+  min-width: 1148px;
+  height: 100%;
+  position: relative;
 }
 .empInfo__mainInfo__profile {
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 290px;
+  height: 44%;
   display: flex;
   background-color: #a6bbce;
   border-radius: 5px;
-  /* align-items: center; */
+  align-items: center;
 }
 .empInfo__mainInfo__profile__img {
   width: 136px;
@@ -170,33 +175,41 @@
 }
 
 .empInfo__mainInfo__infoWrap {
-  width: 96%;
-  height: 372px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 5px;
+  min-width: 1102px;
+  height: 62%;
+
+  position: absolute;
+  z-index: 888;
+  top: 38%;
+  left: 2%;
 }
-.empInfo__mainInfo__infoWrap__infoTable {
+.empInfo__mainInfo__infoWrap-btns {
+  display: flex;
+  position: absolute;
+  right: 1px;
+  top: -10px;
+}
+.empInfo__mainInfo__infoWrap-slide {
+  height: 498px;
+}
+.empInfo__mainInfo__infoWrap__body {
+  background-color: #fff;
   padding: 32px;
-  & table {
-    width: 100%;
-    height: 306px;
-    font-size: 14px;
-    border-collapse: collapse;
-  }
-  & th,
-  td {
-    border: 1px solid #d2d2d2;
-  }
-  & th {
-    width: 15%;
-    background-color: #f1f1f1;
-    text-align: left;
-    text-indent: 10px;
-    font-family: 'Pretendard-Medium';
-    font-weight: normal;
-  }
-  & td {
-    text-indent: 10px;
-  }
+  width: 1038px;
+  height: 434px;
+  border-radius: 0px 12px 12px 12px;
+  border: 1px solid #d2d2d2;
+}
+
+.empInfo__mainInfo__infoWrap__body-show {
+  z-index: 1;
+  position: absolute;
+  opacity: 1;
+  left: 0px;
+  width: 1038px;
+}
+.empInfo__mainInfo__infoWrap__body-hidden {
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
 }
