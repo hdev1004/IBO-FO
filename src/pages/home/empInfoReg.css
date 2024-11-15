@@ -2,8 +2,66 @@
   background-color: aqua;
 }
 
+#empCategory {
+  border-radius: 5px;
+  border: 1px #d2d2d2 solid;
+  width: 142px;
+  height: 30px;
+  background-color: white;
+  outline: none;
+  padding-left: 3px;
+  margin-bottom: 15px;
+}
+
+.empInfo-reg-empnumber > input {
+  border-radius: 5px;
+  border: 1px #d2d2d2 solid;
+  width: 130px;
+  height: 20px;
+  background-color: white;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+#empPosition {
+  border-radius: 5px;
+  border: 1px #d2d2d2 solid;
+  width: 142px;
+  height: 30px;
+  background-color: white;
+  outline: none;
+  padding-left: 3px;
+  margin-bottom: 15px;
+}
+
+.empInfo-reg-join > input {
+  border-radius: 5px;
+  border: 1px #d2d2d2 solid;
+  width: 130px;
+  height: 20px;
+  background-color: white;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.empInfo-reg-belonging > input {
+  border-radius: 5px;
+  border: 1px #d2d2d2 solid;
+  width: 130px;
+  height: 20px;
+  background-color: white;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
 .final-button {
   float: right;
+  display: flex;
+  margin-top: 70px;
+  margin-right: 10px;
 }
 
 .empInfo-reg-name > input,
@@ -11,7 +69,7 @@
 .empInfo-reg-mail > input,
 .empInfo-reg-tel > input,
 .empInfo-reg-emer > input {
-  border-radius: 8px;
+  border-radius: 5px;
   border: 1px #d2d2d2 solid;
   width: 180px;
   height: 20px;
@@ -22,7 +80,7 @@
 }
 
 .empInfo-reg-add > input {
-  border-radius: 8px;
+  border-radius: 5px;
   border: 1px #d2d2d2 solid;
   width: 300px;
   height: 20px;
@@ -39,13 +97,14 @@
   font-family: Pretendard-Regular;
   font-size: 14px;
   color: #ffffff;
-  border-radius: 8px;
+  border-radius: 5px;
   border: none;
+  margin-left: 5px;
 }
 
 .empInfo-reg-sex,
 .empInfo-reg-area {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .empInfo-reg-cate > label,
@@ -117,6 +176,7 @@
   font-family: Pretendard-Bold;
   color: #05153b;
   font-size: 14px;
+  padding-bottom: 10px;
 }
 
 .inner-cntn2 {
@@ -124,6 +184,7 @@
   color: #717179;
   font-size: 14px;
   line-height: 20px;
+  padding-bottom: 10px;
 }
 
 .inner-cntn3 {
@@ -131,34 +192,39 @@
   color: red;
   font-size: 14px;
   line-height: 20px;
+  padding-bottom: 10px;
 }
 
 .left-inner {
-  border-radius: 8px;
+  border-radius: 5px;
   border: 1px #d2d2d2 solid;
-  width: 530px;
-  height: 310px;
+  width: 490px;
+  height: 280px;
   background-color: white;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   margin-bottom: 30px;
+  padding: 10px 20px 20px 20px;
 }
 
 .left-gropInfo {
-  border-radius: 8px;
+  border-radius: 5px;
   border: 1px #d2d2d2 solid;
-  width: 530px;
-  height: 275px;
+  width: 510px;
+  height: 290px;
   background-color: white;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  padding: 10px 0px 0px 20px;
 }
 
-.left-inner > input {
+.view-file {
   width: 160px;
   height: 220px;
   border: 1px #d2d2d2 solid;
-  border-radius: 8px;
+  border-radius: 5px;
   outline: none;
   float: left;
+  text-align: center;
+  margin-right: 20px;
 }
 
 .inner-title {
@@ -182,12 +248,13 @@
 }
 
 .right-inner {
-  border-radius: 8px;
+  border-radius: 5px;
   border: 1px #d2d2d2 solid;
-  width: 743px;
-  height: 617px;
+  width: 750px;
+  height: 635px;
   background-color: white;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  padding: 10px 20px 0px 20px;
 }
 
 .right-inner > p {

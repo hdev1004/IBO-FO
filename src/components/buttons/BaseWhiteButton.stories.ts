@@ -16,6 +16,7 @@ export const BaseWhiteBtn = {
     color: '#000',
     backgroundColor: '#ffffff',
     fontSize: '12px',
-    fontWeight: 'normal'
+    fontWeight: 'normal',
+    border: '1px solid #d2d2d2'
   }
 }

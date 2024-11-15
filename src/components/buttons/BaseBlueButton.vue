@@ -7,6 +7,7 @@ interface Props {
   text?: string
   fontSize?: string
   fontWeight?: string
+  border?: string
 }
 
 const alignStyle = {
@@ -22,7 +23,8 @@ const props = withDefaults(defineProps<Props>(), {
   height: '40px',
   text: '확인',
   color: '#FFF',
-  backgroundColor: '#05153B'
+  backgroundColor: '#05153B',
+  border: '1px solid #05153B'
 })
 </script>
 
@@ -35,6 +37,7 @@ const props = withDefaults(defineProps<Props>(), {
       color: props.color,
       fontSize: props.fontSize,
       fontWeight: props.fontWeight,
+      border: props.border,
 
       ...alignStyle
     }"

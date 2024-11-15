@@ -16,6 +16,7 @@ export const BaseBlueBtn = {
     color: '#FFF',
     backgroundColor: '#05153B',
     fontSize: '12px',
-    fontWeight: 'normal'
+    fontWeight: 'normal',
+    border: '1px solid #05153B'
   }
 }
