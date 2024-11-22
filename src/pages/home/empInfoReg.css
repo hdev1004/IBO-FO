@@ -1,5 +1,6 @@
 .empInfoReg-title {
-  background-color: aqua;
+  margin-top: 70px;
+  margin-left: 245px;
 }
 
 #empCategory {
@@ -202,7 +203,7 @@
   height: 280px;
   background-color: white;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   padding: 10px 20px 20px 20px;
 }
 
@@ -235,17 +236,16 @@
 
 .left {
   box-sizing: border-box;
-  background-color: ivory;
 }
 
 .empInfoReg-wrap {
   display: flex;
   gap: 30px;
+  margin-left: 245px;
 }
 
 .right {
   box-sizing: border-box;
-  background-color: yellowgreen;
 }
 
 .right-inner {

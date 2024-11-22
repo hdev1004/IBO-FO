@@ -1,10 +1,11 @@
 <script setup lang="ts"></script>
 
 <template>
+  <!-- 데이터 없을 때 '-'로 보여야 함 -->
   <table>
     <tbody>
       <tr>
-        <th style="border-radius: 5px 0px 0px 0px">은행명 *</th>
+        <th>은행명 *</th>
         <td>국민은행</td>
         <th>예금주 *</th>
         <td>허광한</td>
