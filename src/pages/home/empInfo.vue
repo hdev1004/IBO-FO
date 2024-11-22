@@ -24,7 +24,7 @@ const tabChange = (value: any) => {
 </script>
 
 <template>
-  <BaseTitle text="인사정보관리" style="margin-top: 60px; margin-left: 100px"></BaseTitle>
+  <BaseTitle text="인사정보관리" style="margin-top: 60px; margin-left: 118px"></BaseTitle>
   <main class="empInfo">
     <section class="empInfo__searchInfo">
       <div class="empInfo__searchInfo__empStatus">
@@ -151,8 +151,11 @@ const tabChange = (value: any) => {
       <article class="empInfo__mainInfo__infoWrap">
         <BaseTab :tabs="tabs" @tabChange="tabChange"></BaseTab>
         <div class="empInfo__mainInfo__infoWrap-btns">
-          <BaseBlueButton text="등록" style="margin-right: 12px"></BaseBlueButton>
-          <BaseWhiteButton text="수정"></BaseWhiteButton>
+          <BaseBlueButton
+            text="등록"
+            style="width: 98px; height: 35px; margin-right: 12px"
+          ></BaseBlueButton>
+          <BaseWhiteButton text="수정" style="width: 98px; height: 35px"></BaseWhiteButton>
         </div>
         <!-- 탭 메뉴에 따라 보여질 테이블이 다름 -->
         <div class="empInfo__mainInfo__infoWrap-slide">
