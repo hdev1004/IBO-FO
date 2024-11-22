@@ -234,15 +234,16 @@
 }
 
 .left {
-  width: 50%;
-  float: left;
   box-sizing: border-box;
   background-color: ivory;
 }
 
+.empInfoReg-wrap {
+  display: flex;
+  gap: 30px;
+}
+
 .right {
-  width: 50%;
-  float: right;
   box-sizing: border-box;
   background-color: yellowgreen;
 }
