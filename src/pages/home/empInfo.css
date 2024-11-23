@@ -10,13 +10,14 @@
 
 /*  인사정보검색 영역 */
 .empInfo__searchInfo {
-  min-width: 483px;
-  height: 820px;
+  /* min-width: 483px; */
+  min-width: 400px;
+  height: 716px;
   background-color: #fff;
   border: 1px solid #d2d2d2;
   border-radius: 5px;
   justify-items: center;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 .empInfo__searchInfo__empStatus {
   width: 88%;
@@ -109,11 +110,11 @@
     margin: 0px;
   }
   & p:nth-child(1) {
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 3%;
   }
   & p:nth-child(2) {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 3%;
   }
   & p:nth-child(4) {
@@ -125,7 +126,7 @@
 
 /* 인사정보 영역*/
 .empInfo__mainInfo {
-  min-width: 1148px;
+  min-width: 1120px;
   height: 100%;
   position: relative;
 }
@@ -133,8 +134,8 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  /* height: 44%; */
-  height: 417px;
+  /* height: 417px; */
+  height: 390px;
   display: flex;
   background-color: #a6bbce;
   border-radius: 5px;
@@ -161,13 +162,13 @@
     list-style: none;
     & li {
       font-family: 'Pretendard-Bold';
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 10px;
     }
   }
 }
 .empInfo__mainInfo__profile__info__name {
-  font-size: 24px;
+  font-size: 22px;
   font-family: 'Pretendard-Bold';
   margin: 0px;
   margin-bottom: 30px;
@@ -175,17 +176,16 @@
 .empInfo__mainInfo__profile__info__job,
 .empInfo__mainInfo__profile__info__dept,
 .empInfo__mainInfo__profile__info__role {
-  font-size: 20px;
+  font-size: 18px;
   margin-left: 20px;
 }
 
 .empInfo__mainInfo__infoWrap {
-  min-width: 1102px;
-  /* height: 62%; */
-  height: 540px;
+  min-width: 1074px;
+  height: 447px;
   position: absolute;
   z-index: 888;
-  top: 285px;
+  top: 267px;
   left: 2%;
 }
 .empInfo__mainInfo__infoWrap-btns {
@@ -195,13 +195,13 @@
   top: -10px;
 }
 .empInfo__mainInfo__infoWrap-slide {
-  height: 498px;
+  height: 414px;
 }
 .empInfo__mainInfo__infoWrap__body {
   background-color: #fff;
   padding: 32px;
-  width: 1038px;
-  height: 434px;
+  width: 1010px;
+  height: 350px;
   border-radius: 0px 5px 5px 5px;
   border: 1px solid #d2d2d2;
 }
@@ -211,7 +211,7 @@
   position: absolute;
   opacity: 1;
   left: 0px;
-  width: 1038px;
+  width: 1010px;
 }
 .empInfo__mainInfo__infoWrap__body-hidden {
   position: absolute;

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import SearchSVG from '@/assets/home/search.svg'
-import ArrowBottomSVG from '@/assets/home/arrow-bottom.svg'
-import SearchProfileSVG from '@/assets/home/home_searchProfile.svg'
-import MainProfileSVG from '@/assets/home/home_mainProfile.svg'
+import SearchSVG from '@/assets/home/empInfo/search.svg'
+import ArrowBottomSVG from '@/assets/home/empInfo/arrow-bottom.svg'
+import SearchProfileSVG from '@/assets/home/empInfo/home_searchProfile.svg'
+import MainProfileSVG from '@/assets/home/empInfo/home_mainProfile.svg'
 import { el } from 'element-plus/es/locales.mjs'
 import BaseTab from '@/components/tab/BaseTab.vue'
 import infoTable from './empInfoTab/infoTable.vue'
@@ -153,9 +153,12 @@ const tabChange = (value: any) => {
         <div class="empInfo__mainInfo__infoWrap-btns">
           <BaseBlueButton
             text="등록"
-            style="width: 98px; height: 35px; margin-right: 12px"
+            style="width: 98px; height: 35px; margin-right: 12px; font-size: 14px"
           ></BaseBlueButton>
-          <BaseWhiteButton text="수정" style="width: 98px; height: 35px"></BaseWhiteButton>
+          <BaseWhiteButton
+            text="수정"
+            style="width: 98px; height: 35px; font-size: 14px"
+          ></BaseWhiteButton>
         </div>
         <!-- 탭 메뉴에 따라 보여질 테이블이 다름 -->
         <div class="empInfo__mainInfo__infoWrap-slide">
