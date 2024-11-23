@@ -13,7 +13,7 @@ declare module 'vue' {
     BaseTab: typeof import('./src/components/tab/BaseTab.vue')['default']
     BaseTitle: typeof import('./src/components/title/BaseTitle.vue')['default']
     BaseWhiteButton: typeof import('./src/components/buttons/BaseWhiteButton.vue')['default']
-    copy: typeof import('./src/components/buttons/BaseBlueButton copy.vue')['default']
+    BlueDownloadButton: typeof import('./src/components/buttons/BlueDownloadButton.vue')['default']
     Header: typeof import('./src/layouts/header.vue')['default']
     Menu: typeof import('./src/layouts/menu.vue')['default']
     MenuButton: typeof import('./src/components/buttons/MenuButton.vue')['default']
