@@ -10,15 +10,18 @@ declare module 'vue' {
     AppLayout: typeof import('./src/layouts/AppLayout.vue')['default']
     BaseBlueButton: typeof import('./src/components/buttons/BaseBlueButton.vue')['default']
     BaseButton: typeof import('./src/components/BaseButton.vue')['default']
+    BaseRedButton: typeof import('./src/components/buttons/BaseRedButton.vue')['default']
     BaseTab: typeof import('./src/components/tab/BaseTab.vue')['default']
     BaseTitle: typeof import('./src/components/title/BaseTitle.vue')['default']
     BaseWhiteButton: typeof import('./src/components/buttons/BaseWhiteButton.vue')['default']
     BlueDownloadButton: typeof import('./src/components/buttons/BlueDownloadButton.vue')['default']
+    DayOffBlueButton: typeof import('./src/components/buttons/DayOffBlueButton.vue')['default']
     Header: typeof import('./src/layouts/header.vue')['default']
     Menu: typeof import('./src/layouts/menu.vue')['default']
     MenuButton: typeof import('./src/components/buttons/MenuButton.vue')['default']
     MenuSubmenu: typeof import('./src/layouts/menuSubmenu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    WhiteDownloadButton: typeof import('./src/components/buttons/WhiteDownloadButton.vue')['default']
   }
 }

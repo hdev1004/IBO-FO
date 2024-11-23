@@ -1,6 +1,15 @@
 <script setup lang="ts">
 import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
 import BaseWhiteButton from '@/components/buttons/BaseWhiteButton.vue'
+import { ElMessage } from 'element-plus'
+
+const succ = () => {
+  ElMessage({
+    message: '정보 등록이 완료되었습니다.',
+    type: 'success',
+    plain: true
+  })
+}
 </script>
 
 <template>
@@ -118,6 +127,7 @@ import BaseWhiteButton from '@/components/buttons/BaseWhiteButton.vue'
               style="margin-right: 20px"
             ></BaseWhiteButton>
             <BaseBlueButton
+              @click="succ"
               width="90px"
               height="30px"
               font-size="14px"

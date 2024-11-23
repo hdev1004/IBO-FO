@@ -1,7 +1,7 @@
-import BlueDownloadButton from './BlueDownloadButton.vue'
+import WhiteDownloadButton from './WhiteDownloadButton.vue'
 
 export default {
-  component: BlueDownloadButton,
+  component: WhiteDownloadButton,
   title: 'Components/Buttons',
   tags: ['autodocs'],
   argTypes: {
@@ -11,15 +11,15 @@ export default {
   excludeStories: /.*Data$/
 }
 
-export const BlueDownBtn = {
+export const WhiteDownBtn = {
   args: {
     width: '120px',
     height: '40px',
     text: '다운로드',
-    color: '#FFF',
-    backgroundColor: '#05153B',
+    color: '#05153B',
+    backgroundColor: '#ffffff',
     fontSize: '12px',
     fontWeight: 'normal',
-    border: '1px solid #05153B'
+    border: '1px solid #d2d2d2'
   }
 }
