@@ -1,10 +1,59 @@
 .container {
+  /* max-width: 100%; */
+  /* height: calc(100vh - 281px); */
+  max-width: 1608px;
+  height: 666px;
+  padding: 25px 44px;
   margin-left: 118px;
   margin-right: 118px;
   margin-bottom: 60px;
-  max-width: 100%;
-  height: calc(100vh - 231px);
   background-color: #fff;
   border-radius: 5px;
   border: 1px solid #d2d2d2;
+}
+
+figure {
+  margin: 0px;
+}
+.empRecord__info {
+  display: flex;
+}
+.empRecord__info__profileImg {
+  border: 1px solid tan;
+  margin-right: 50px;
+  align-content: center;
+  position: relative;
+}
+.editProfileImg {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  bottom: 60px;
+  background-color: #efefef;
+  border: 2px solid #717179;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empRecord__info__profileInfo {
+  border: 1px solid saddlebrown;
+  height: 230px;
+}
+.empRecord__info__profileInfo__info {
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  & li {
+    font-family: 'Pretendard-Bold';
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.empInfo__tabs {
+  border: 1px solid teal;
 }
