@@ -42,7 +42,8 @@ const props = withDefaults(defineProps<Props>(), {
       ...alignStyle
     }"
   >
-    {{ props.text }}
+    <img src="@/assets/share/group.svg" />
+    <span class="downloadText">{{ props.text }}</span>
   </section>
 </template>
 
