@@ -1,3 +1,4 @@
+import { attendanceRouter } from './attendance'
 import { exampleRouter } from './example/exampleRouter'
 import { homeRouter } from './home'
 import { scheduleRouter } from './schedule'
@@ -25,5 +26,6 @@ export default [
 
   ...exampleRouter,
   ...homeRouter,
-  ...scheduleRouter
+  ...scheduleRouter,
+  ...attendanceRouter
 ]

@@ -33,6 +33,26 @@
   opacity: 0;
 }
 
+.shedule-modal--open {
+  transition: 0.3s;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  height: 100vh;
+  z-index: 300;
+  opacity: 1;
+}
+
+.shedule-modal--close {
+  transition: 0.3s;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0;
+}
+
 @keyframes slidein {
   0% {
     left: 0px;

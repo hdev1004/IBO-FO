@@ -39,7 +39,7 @@ const tabChange = (value: any) => {
     </div>
   </section>
 
-  <section v-if="useSchedule.getIsSchedule()">
+  <section :class="useSchedule.getIsSchedule() ? 'shedule-modal--open' : 'shedule-modal--close'">
     <scheduleManagerWorkModal></scheduleManagerWorkModal>
   </section>
 </template>
