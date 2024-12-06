@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
+import { BaseWhiteBtn } from '@/components/buttons/BaseWhiteButton.stories'
+import BaseWhiteButton from '@/components/buttons/BaseWhiteButton.vue'
+import BaseWhiteMoveBtn from '@/components/buttons/BaseWhiteMoveBtn.vue'
 import BaseTitle from '@/components/title/BaseTitle.vue'
 
 const vacationType = ref(null)
@@ -26,6 +30,177 @@ const vacationOptions = [
 ]
 const vacationDate = ref(null)
 const resonse = ref('')
+
+interface Tree {
+  label: string
+  children?: Tree[]
+}
+
+const handleNodeClick = (data: Tree) => {
+  console.log(data)
+}
+
+const data: Tree[] = [
+  {
+    label: 'Level one 1',
+    children: [
+      {
+        label: 'Level two 1-1',
+        children: [
+          {
+            label: 'Level three 1-1-1'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: 'Level one 2',
+    children: [
+      {
+        label: 'Level two 2-1',
+        children: [
+          {
+            label: 'Level three 2-1-1'
+          }
+        ]
+      },
+      {
+        label: 'Level two 2-2',
+        children: [
+          {
+            label: 'Level three 2-2-1'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: 'Level one 3',
+    children: [
+      {
+        label: 'Level two 3-1',
+        children: [
+          {
+            label: 'Level three 3-1-1'
+          }
+        ]
+      },
+      {
+        label: 'Level two 3-2',
+        children: [
+          {
+            label: 'Level three 3-2-1'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: 'Level one 3',
+    children: [
+      {
+        label: 'Level two 3-1',
+        children: [
+          {
+            label: 'Level three 3-1-1'
+          }
+        ]
+      },
+      {
+        label: 'Level two 3-2',
+        children: [
+          {
+            label: 'Level three 3-2-1'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: 'Level one 3',
+    children: [
+      {
+        label: 'Level two 3-1',
+        children: [
+          {
+            label: 'Level three 3-1-1'
+          }
+        ]
+      },
+      {
+        label: 'Level two 3-2',
+        children: [
+          {
+            label: 'Level three 3-2-1'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: 'Level one 3',
+    children: [
+      {
+        label: 'Level two 3-1',
+        children: [
+          {
+            label: 'Level three 3-1-1'
+          }
+        ]
+      },
+      {
+        label: 'Level two 3-2',
+        children: [
+          {
+            label: 'Level three 3-2-1'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: 'Level one 3',
+    children: [
+      {
+        label: 'Level two 3-1',
+        children: [
+          {
+            label: 'Level three 3-1-1'
+          }
+        ]
+      },
+      {
+        label: 'Level two 3-2',
+        children: [
+          {
+            label: 'Level three 3-2-1'
+          }
+        ]
+      }
+    ]
+  }
+]
+
+const defaultProps = {
+  children: 'children',
+  label: 'label'
+}
+
+const checkAll = ref(false)
+const isIndeterminate = ref(true)
+const checkedCities = ref(['Shanghai', 'Beijing'])
+const cities = ['Shanghai', 'Beijing', 'Guangzhou', 'Shenzhen']
+
+const handleCheckAllChange = (val: boolean) => {
+  checkedCities.value = val ? cities : []
+  isIndeterminate.value = false
+}
+const handleCheckedCitiesChange = (value: string[]) => {
+  const checkedCount = value.length
+  checkAll.value = checkedCount === cities.length
+  isIndeterminate.value = checkedCount > 0 && checkedCount < cities.length
+}
 </script>
 
 <template>
@@ -141,29 +316,77 @@ const resonse = ref('')
 
         <section class="attendanceWork-body-right">
           <!-- right -->
-          <div>결재선</div>
-          <div>
-            <div>결재라인1</div>
-            <div>결재라인2</div>
-            <div>
-              <div>결재</div>
-              <div>초기화</div>
+          <div class="attendanceWork-body-title">결재선</div>
+          <div class="attendanceWork-body-right-container">
+            <el-scrollbar class="attendanceWork-body-depart--left">
+              <el-tree
+                class="attendanceWork-tree"
+                style="max-width: 600px"
+                :data="data"
+                :props="defaultProps"
+                @node-click="handleNodeClick"
+              />
+            </el-scrollbar>
+            <div class="attendanceWork-body-depart--right">
+              <el-checkbox
+                v-model="checkAll"
+                :indeterminate="isIndeterminate"
+                @change="handleCheckAllChange"
+              >
+                Check all
+              </el-checkbox>
+              <el-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
+                <el-checkbox v-for="city in cities" :key="city" :label="city" :value="city">
+                  {{ city }}
+                </el-checkbox>
+              </el-checkbox-group>
+            </div>
+            <div class="attendanceWork-body-btn-container">
+              <div class="attendanceWork-body-right-btn--top">
+                <BaseWhiteMoveBtn text="결재" width="57px" height="30px" font-size="12px">
+                </BaseWhiteMoveBtn>
 
-              <div>참조</div>
-              <div>초기화</div>
+                <BaseWhiteButton
+                  text="초기화"
+                  width="57px"
+                  height="30px"
+                  font-size="12px"
+                ></BaseWhiteButton>
+              </div>
+
+              <div class="attendanceWork-body-right-btn--bottom">
+                <BaseWhiteMoveBtn text="참조" width="57px" height="30px" font-size="12px">
+                </BaseWhiteMoveBtn>
+                <BaseWhiteButton
+                  text="초기화"
+                  width="57px"
+                  height="30px"
+                  font-size="12px"
+                ></BaseWhiteButton>
+              </div>
             </div>
 
-            <div>
-              <div>결재란</div>
-              <div>참조란</div>
+            <div class="attendanceWork-body-right-last">
+              <el-scrollbar class="attendanceWork-body-right-last--top">
+                <div class="attendanceWork-user-card" v-for="item in [1, 2, 3, 4, 5, 6, 7, 8, 10]">
+                  <div class="attendanceWork-user-card--text">김유경 대표이사</div>
+                  <img src="@/assets/attendance/close.svg" />
+                </div>
+              </el-scrollbar>
+              <el-scrollbar class="attendanceWork-body-right-last--bottom">
+                <div class="attendanceWork-user-card" v-for="item in [1, 2, 3, 4, 5, 6, 7, 8, 10]">
+                  <div class="attendanceWork-user-card--text">김유경 대표이사</div>
+                  <img src="@/assets/attendance/close.svg" />
+                </div>
+              </el-scrollbar>
             </div>
           </div>
         </section>
       </section>
 
       <section class="attendanceWork-btn">
-        <div>취소</div>
-        <div>결재</div>
+        <BaseWhiteButton text="취소" width="65px" height="30px" font-size="12px"></BaseWhiteButton>
+        <BaseBlueButton text="결재" width="65px" height="30px" font-size="12px"></BaseBlueButton>
       </section>
     </section>
   </section>
