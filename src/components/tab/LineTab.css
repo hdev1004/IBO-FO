@@ -1,0 +1,35 @@
+.tab {
+  position: relative;
+  display: flex;
+}
+
+.tab-lst {
+  border-bottom: 2px solid #05153b;
+  transition: 0.3s;
+  cursor: pointer;
+  min-width: 98px;
+  width: 98px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #05153b;
+  background-color: white;
+}
+
+.tab-lst--disable {
+  transition: 0.3s;
+  cursor: pointer;
+  min-width: 98px;
+  width: 98px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  color: #d2d2d2;
+  background-color: white;
+  border-bottom: 2px solid #d2d2d2;
+}

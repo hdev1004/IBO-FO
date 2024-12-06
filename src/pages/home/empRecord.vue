@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import ProfileImgSVG from '@/assets/home/empRecord/profileImg.svg'
 import EditProfileImgSVG from '@/assets/home/empRecord/editProfileImg.svg'
+import TelephoneSVG from '@/assets/home/empRecord/telephone.svg'
+import MessageSVG from '@/assets/home/empRecord/message.svg'
+import EditInfoSVG from '@/assets/home/empRecord/editInfo.svg'
+import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
 </script>
 
 <template>
@@ -22,7 +26,17 @@ import EditProfileImgSVG from '@/assets/home/empRecord/editProfileImg.svg'
             <li>직위 <span class="empRecord__info__profileInfo__info__role">사원</span></li>
           </ul>
         </div>
-        <div class="empRecord__info__profileInfo__icons"></div>
+        <div class="empRecord__info__profileInfo__icons">
+          <div class="icons-telephone"><img :src="TelephoneSVG" /></div>
+          <div class="icons-message"><img :src="MessageSVG" /></div>
+          <div class="icons-status"><span></span>재직중</div>
+          <div class="icons-editInfo"><img :src="EditInfoSVG" />정보수정</div>
+          <BaseBlueButton
+            text="인쇄"
+            style="width: 60px; height: 28px; font-size: 14px"
+            class="icons-printBtn"
+          ></BaseBlueButton>
+        </div>
       </div>
     </section>
 
