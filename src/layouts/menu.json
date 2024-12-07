@@ -15,8 +15,8 @@
     "내 참조 문서": "/dd"
   },
   "payment": {
-    "급여대장": "/aa",
-    "월급 명세서": "/bb"
+    "급여대장": "/payrollRegister",
+    "월급 명세서": "/paySlip"
   },
   "retired": {
     "퇴직금 산정": "/aa"
