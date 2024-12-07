@@ -5,6 +5,23 @@ import TelephoneSVG from '@/assets/home/empRecord/telephone.svg'
 import MessageSVG from '@/assets/home/empRecord/message.svg'
 import EditInfoSVG from '@/assets/home/empRecord/editInfo.svg'
 import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
+import LineTab from '@/components/tab/LineTab.vue'
+import { now } from '@vueuse/core'
+import EmpInfoTable from './empRecordTab/empInfoTable.vue'
+import ContractInfoTable from './empRecordTab/contractInfoTable.vue'
+import CareerInfoTable from './empRecordTab/careerInfoTable.vue'
+
+let tabs = ['인사정보', '계약정보', '경력·학력']
+
+let nowTab = ref({
+  tab: '인사정보',
+  idx: 0
+})
+
+const tabChange = (value: any) => {
+  console.log(value)
+  nowTab.value = value
+}
 </script>
 
 <template>
@@ -40,7 +57,33 @@ import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
       </div>
     </section>
 
-    <section class="empInfo__tabs"></section>
+    <section class="empRecord__tabs">
+      <LineTab :tabs="tabs" @tabChange="tabChange"></LineTab>
+      <div
+        class="empRecord__tabs__body"
+        :class="
+          nowTab.tab === '인사정보' ? 'empRecord__tabs__body-show' : 'empRecord__tabs__body-hidden'
+        "
+      >
+        <EmpInfoTable></EmpInfoTable>
+      </div>
+      <div
+        class="empRecord__tabs__body"
+        :class="
+          nowTab.tab === '계약정보' ? 'empRecord__tabs__body-show' : 'empRecord__tabs__body-hidden'
+        "
+      >
+        <ContractInfoTable></ContractInfoTable>
+      </div>
+      <div
+        class="empRecord__tabs__body"
+        :class="
+          nowTab.tab === '경력·학력' ? 'empRecord__tabs__body-show' : 'empRecord__tabs__body-hidden'
+        "
+      >
+        <CareerInfoTable></CareerInfoTable>
+      </div>
+    </section>
   </main>
 </template>
 
