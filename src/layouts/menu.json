@@ -10,7 +10,7 @@
   },
   "attendance": {
     "근무/휴가 처리": "/attendanceWork",
-    "내 신청 문서": "/bb",
+    "내 신청 문서": "/attendanceApply",
     "내 결재 문서": "/cc",
     "내 참조 문서": "/dd"
   },
