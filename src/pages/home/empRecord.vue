@@ -10,6 +10,7 @@ import { now } from '@vueuse/core'
 import EmpInfoTable from './empRecordTab/empInfoTable.vue'
 import ContractInfoTable from './empRecordTab/contractInfoTable.vue'
 import CareerInfoTable from './empRecordTab/careerInfoTable.vue'
+import router from '@/router'
 
 let tabs = ['인사정보', '계약정보', '경력·학력']
 
@@ -21,6 +22,10 @@ let nowTab = ref({
 const tabChange = (value: any) => {
   console.log(value)
   nowTab.value = value
+}
+
+const edit = () => {
+  router.push({ path: '/home/empRecord/edit' })
 }
 </script>
 
@@ -47,7 +52,7 @@ const tabChange = (value: any) => {
           <div class="icons-telephone"><img :src="TelephoneSVG" /></div>
           <div class="icons-message"><img :src="MessageSVG" /></div>
           <div class="icons-status"><span></span>재직중</div>
-          <div class="icons-editInfo"><img :src="EditInfoSVG" />정보수정</div>
+          <div class="icons-editInfo" @click="edit()"><img :src="EditInfoSVG" />정보수정</div>
           <BaseBlueButton
             text="인쇄"
             style="width: 60px; height: 28px; font-size: 14px"

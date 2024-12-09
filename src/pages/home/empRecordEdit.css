@@ -1,0 +1,43 @@
+.container {
+  max-width: 1608px;
+  height: 666px;
+  padding: 25px 44px;
+  margin-left: 118px;
+  margin-right: 118px;
+  margin-bottom: 60px;
+  border: 1px solid #d2d2d2;
+}
+.editWrap {
+  display: flex;
+}
+.editWrap__input {
+  width: 620px;
+  border: 1px solid blueviolet;
+}
+.editWrap__img {
+  width: 300px;
+  border: 1px solid blueviolet;
+}
+.editWrap__input > div {
+  display: flex;
+  align-items: center;
+  & label {
+    font-family: 'Pretendard-Bold';
+    font-size: 16px;
+    width: 78px;
+    height: 32px;
+    text-align: right;
+  }
+  & input {
+    width: 489px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #d2d2d2;
+    text-indent: 20px;
+    margin-left: 24px;
+  }
+}
+.editWrap__input > div > input:focus {
+  outline: none;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
