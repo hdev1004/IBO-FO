@@ -16,6 +16,7 @@ figure {
 .empRecord__info {
   display: flex;
   margin-bottom: 25px;
+  height: 270px;
 }
 .empRecord__info__profileImg {
   margin-right: 50px;
@@ -27,7 +28,7 @@ figure {
   height: 25px;
   position: absolute;
   right: 0px;
-  bottom: 60px;
+  bottom: 78px;
   background-color: #efefef;
   border: 2px solid #717179;
   border-radius: 50px;
@@ -36,10 +37,10 @@ figure {
   justify-content: center;
 }
 .empRecord__info__profileInfo {
-  height: 250px;
+  height: 100%;
 }
 .empRecord__info__profileInfo__info {
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   & p {
     font-family: 'Pretendard-Bold';
     font-size: 30px;
@@ -69,6 +70,7 @@ figure {
     align-content: center;
   }
 }
+
 .icons-telephone,
 .icons-message {
   width: 30px;
@@ -97,7 +99,7 @@ figure {
 }
 
 .empRecord__tabs {
-  height: 388px;
+  height: 368px;
 }
 
 .empRecord__tabs__body {

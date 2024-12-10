@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
 import BaseTitle from '@/components/title/BaseTitle.vue'
+import EditSVG from '@/assets/home/empRecord/edit.svg'
 </script>
 
 <template>
@@ -27,7 +28,7 @@ import BaseTitle from '@/components/title/BaseTitle.vue'
       </div>
 
       <div class="editWrap__img">
-        <div></div>
+        <input type="file" id="profile" /><img :src="EditSVG" />
         <label for="profile">프로필 이미지</label>
       </div>
     </section>

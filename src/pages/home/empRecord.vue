@@ -24,6 +24,8 @@ const tabChange = (value: any) => {
   nowTab.value = value
 }
 
+const disabled = ref(false)
+
 const edit = () => {
   router.push({ path: '/home/empRecord/edit' })
 }
@@ -49,7 +51,11 @@ const edit = () => {
           </ul>
         </div>
         <div class="empRecord__info__profileInfo__icons">
-          <div class="icons-telephone"><img :src="TelephoneSVG" /></div>
+          <el-tooltip :disabled="disabled" content="010-3423-2234" placement="top" effect="light">
+            <div class="icons-telephone" @click="disabled = !disabled">
+              <img :src="TelephoneSVG" />
+            </div>
+          </el-tooltip>
           <div class="icons-message"><img :src="MessageSVG" /></div>
           <div class="icons-status"><span></span>재직중</div>
           <div class="icons-editInfo" @click="edit()"><img :src="EditInfoSVG" />정보수정</div>
