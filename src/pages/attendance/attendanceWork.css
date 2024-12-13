@@ -1,7 +1,6 @@
 .attendanceWork {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  width: calc(100% - 80px - 118px);
+  margin-left: 118px;
   margin-top: 70px;
 }
 
@@ -74,7 +73,7 @@
 }
 
 .attendanceWork-body-left {
-  width: 500px;
+  flex: 1;
 }
 
 .attendanceWork-body-select {
@@ -93,6 +92,7 @@
 }
 
 .attendanceWork-body-wrap {
+  gap: 20px;
   display: flex;
 }
 
@@ -107,16 +107,19 @@
 }
 
 .attendanceWork-body-right-container {
+  width: 100%;
   display: flex;
   gap: 10px;
 }
 
 .attendanceWork-body-right {
+  flex: 1;
   margin-top: 13px;
 }
 
 .attendanceWork-body-depart--left {
   width: 176px;
+  min-width: 176px;
   height: 400px;
   border: 1px solid #d2d2d2;
   border-radius: 5px;
@@ -124,6 +127,7 @@
 
 .attendanceWork-body-depart--right {
   width: 176px;
+  min-width: 176px;
   height: 400px;
   border: 1px solid #d2d2d2;
   border-radius: 5px;
@@ -138,30 +142,41 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 .attendanceWork-body-right-last--top {
   padding-top: 8px;
   box-sizing: border-box;
-  width: 176px;
   height: 195px;
+  min-width: 190px;
   border: 1px solid #d2d2d2;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  & > :deep(.el-scrollbar__wrap) {
+    min-width: 158px;
+    width: 80%;
+  }
 }
 
 .attendanceWork-body-right-last--bottom {
   padding-top: 8px;
   box-sizing: border-box;
-  width: 176px;
+  width: 100%;
   height: 195px;
   border: 1px solid #d2d2d2;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  & > :deep(.el-scrollbar__wrap) {
+    min-width: 158px;
+    width: 80%;
+  }
 }
 
 .attendanceWork-btn {
@@ -193,12 +208,19 @@
 .attendanceWork-user-card {
   display: flex;
   font-size: 14px;
-  height: 30px;
+  height: 35px;
   border: 1px solid #d2d2d2;
-  width: 158px;
+  min-width: 158px;
   align-items: center;
   position: relative;
+  border-radius: 5px;
   margin-bottom: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
   .attendanceWork-user-card--text {
     margin-left: 10px;
   }
