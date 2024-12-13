@@ -43,15 +43,22 @@
   }
 }
 
+.birth-datepicker > :deep(.el-input__wrapper) {
+  width: 489px;
+  height: 40px;
+  margin-left: 24px;
+}
+
 .editWrap__input > div > input:focus {
   outline: none;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
 
 .editWrap__img {
   width: 183px;
   height: 230px;
   text-align: center;
+
   & div {
     width: 181px;
     height: 181px;
@@ -59,6 +66,13 @@
     border-radius: 5px;
     background-color: #fff;
     margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+    & img {
+      position: absolute;
+      top: 45%;
+      right: 42%;
+    }
   }
   & label {
     font-family: 'Pretendard-Bold';

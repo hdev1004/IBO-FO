@@ -92,6 +92,7 @@ figure {
 }
 .icons-editInfo {
   width: 92px;
+  cursor: pointer;
   & img {
     margin-left: 7px;
     margin-right: 7px;

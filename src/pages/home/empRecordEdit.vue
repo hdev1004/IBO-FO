@@ -2,6 +2,9 @@
 import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
 import BaseTitle from '@/components/title/BaseTitle.vue'
 import EditSVG from '@/assets/home/empRecord/edit.svg'
+import { ref } from 'vue'
+
+const birth = ref(null)
 </script>
 
 <template>
@@ -11,19 +14,25 @@ import EditSVG from '@/assets/home/empRecord/edit.svg'
       <div class="editWrap__input">
         <div class="editWrap__input__name">
           <label for="name">이름</label>
-          <input type="text" id="name" placeholder="이름을 입력하세요" />
+          <input type="text" id="name" maxlength="6" placeholder="이름을 입력하세요" />
         </div>
         <div class="editWrap__input__tel">
           <label for="tel">전화번호</label>
-          <input type="tel" id="tel" placeholder="전화번호를 입력하세요" />
+          <input type="tel" id="tel" maxlength="11" placeholder="'-'를 제외하고 입력하세요" />
         </div>
         <div class="editWrap__input__email">
           <label for="email">이메일</label>
-          <input type="email" id="email" placeholder="이메일을 입력하세요" />
+          <input type="email" id="email" maxlength="64" placeholder="이메일을 입력하세요" />
         </div>
         <div class="editWrap__input__birth">
-          <label for="birth">생년월일</label>
-          <input type="date" id="birth" placeholder="일자를 입력하세요" />
+          <label>생년월일</label>
+          <el-date-picker
+            v-model="birth"
+            class="birth-datepicker"
+            type="date"
+            size="large"
+            placeholder="일자를 선택하세요"
+          />
         </div>
       </div>
 
