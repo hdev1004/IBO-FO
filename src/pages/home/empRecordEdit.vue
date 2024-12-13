@@ -28,11 +28,17 @@ import EditSVG from '@/assets/home/empRecord/edit.svg'
       </div>
 
       <div class="editWrap__img">
-        <input type="file" id="profile" /><img :src="EditSVG" />
+        <div class="editWrap__img__input">
+          <img :src="EditSVG" />
+        </div>
         <label for="profile">프로필 이미지</label>
       </div>
     </section>
-    <BaseBlueButton text="저장" style="width: 161px; height: 35px"></BaseBlueButton>
+    <BaseBlueButton
+      text="저장"
+      style="width: 161px; height: 35px"
+      class="save_btn"
+    ></BaseBlueButton>
   </main>
 </template>
 

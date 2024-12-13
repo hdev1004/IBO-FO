@@ -9,12 +9,11 @@
 }
 .editWrap {
   display: flex;
+  height: 240px;
 }
 .editWrap__input {
   width: 600px;
-  height: 234px;
   margin-right: 46px;
-  border: 1px solid blueviolet;
 }
 .editWrap__input > div {
   display: flex;
@@ -26,6 +25,7 @@
     width: 78px;
     height: 32px;
     text-align: right;
+    align-content: center;
   }
   & input {
     width: 489px;
@@ -38,6 +38,9 @@
 }
 .editWrap__input > div:nth-child(4) {
   margin-bottom: 0px;
+  & input {
+    width: 247px;
+  }
 }
 
 .editWrap__input > div > input:focus {
@@ -47,13 +50,26 @@
 
 .editWrap__img {
   width: 183px;
-  height: 234px;
-  border: 1px solid blueviolet;
-  & input {
+  height: 230px;
+  text-align: center;
+  & div {
     width: 181px;
     height: 181px;
     border: 1px solid #d2d2d2;
     border-radius: 5px;
     background-color: #fff;
+    margin-bottom: 20px;
   }
+  & label {
+    font-family: 'Pretendard-Bold';
+    font-size: 16px;
+    width: 78px;
+    height: 32px;
+  }
+}
+
+.save_btn {
+  position: relative;
+  top: 100px;
+  left: 349px;
 }
