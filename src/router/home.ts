@@ -10,6 +10,11 @@ export const homeRouter = [
     component: () => import('@/pages/home/empRecord.vue')
   },
   {
+    path: '/home/empRecord/edit',
+    name: 'home-empRocord-edit',
+    component: () => import('@/pages/home/empRecordEdit.vue')
+  },
+  {
     path: '/home/groupManage',
     name: 'home-groupManage',
     component: () => import('@/pages/home/groupManage.vue')
