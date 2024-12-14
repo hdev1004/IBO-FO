@@ -31,7 +31,7 @@
       ></BaseBlueButton>
     </div>
 
-    <hr color="#D2D2D2" size="1" style="margin: 10px 20px 10px 20px" />
+    <hr color="#D2D2D2" size="1" style="margin: 10px 20px 0px 20px" />
   </section>
 </template>
 

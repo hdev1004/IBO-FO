@@ -43,8 +43,8 @@
   }
 }
 
-.birth-datepicker > :deep(.el-input__wrapper) {
-  width: 489px;
+:deep(.el-input__inner) {
+  width: 200px;
   height: 40px;
   margin-left: 24px;
 }
