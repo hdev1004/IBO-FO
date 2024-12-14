@@ -2,35 +2,34 @@
 import type { TableColumnCtx } from 'element-plus'
 
 interface User {
+  cate: string
   date: string
-  name: string
-  address: string
-}
-
-const formatter = (row: User, column: TableColumnCtx<User>) => {
-  return row.address
+  payDate: string
+  paySlip: string
+  down: string
 }
 
 const tableData: User[] = [
   {
-    date: '2016-05-03',
-    name: 'Tom',
-    address: 'No. 189, Grove St, Los Angeles'
+    cate: '일반근로소득',
+    date: '2024-12',
+    payDate: '2024-12-10',
+    paySlip: ' ',
+    down: '-'
   },
   {
-    date: '2016-05-02',
-    name: 'Tom',
-    address: 'No. 189, Grove St, Los Angeles'
+    cate: '일반근로소득',
+    date: '2024-11',
+    payDate: '2024-11-08',
+    paySlip: ' ',
+    down: '-'
   },
   {
-    date: '2016-05-04',
-    name: 'Tom',
-    address: 'No. 189, Grove St, Los Angeles'
-  },
-  {
-    date: '2016-05-01',
-    name: 'Tom',
-    address: 'No. 189, Grove St, Los Angeles'
+    cate: '일반근로소득',
+    date: '2024-10',
+    payDate: '2024-10-10',
+    paySlip: ' ',
+    down: '-'
   }
 ]
 </script>
@@ -42,9 +41,12 @@ const tableData: User[] = [
       :default-sort="{ prop: 'date', order: 'descending' }"
       style="width: 100%"
     >
-      <el-table-column prop="date" label="Date" sortable width="180" />
-      <el-table-column prop="name" label="Name" width="180" />
-      <el-table-column prop="address" label="Address" :formatter="formatter" />
+      <el-table-column prop="cate" label="구분" width="180" />
+      <el-table-column prop="date" label="귀속연월" width="180" />
+      <el-table-column prop="payDate" label="급여지급일" sortable width="180" />
+      <el-table-column prop="pay" label="급여대장" />
+      <el-table-column prop="paySlip" label="급여명세서" width="180" />
+      <el-table-column prop="down" label="기타 첨부파일" width="180" />
     </el-table>
   </main>
 </template>
