@@ -26,6 +26,7 @@
     height: 32px;
     text-align: right;
     align-content: center;
+    color: #05153b;
   }
   & input {
     width: 489px;
@@ -38,15 +39,34 @@
 }
 .editWrap__input > div:nth-child(4) {
   margin-bottom: 0px;
-  & input {
-    width: 247px;
+  & label {
+    margin-right: 24px;
   }
 }
 
-:deep(.el-input__inner) {
-  width: 200px;
+:deep(.el-input--large .el-input__wrapper) {
+  padding: 1px 20px;
   height: 40px;
-  margin-left: 24px;
+  border: 1px solid #d2d2d2;
+  box-shadow: none;
+  /* box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em; */
+  & input::placeholder {
+    color: lightgray;
+  }
+}
+/* 포커스 스타일 아직 안 먹음 */
+:deep(.el-input--large .el-input__wrapper:focus) {
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+:deep(.el-input__wrapper > input::placeholder) {
+  color: gray;
+}
+:deep(.el-input__inner) {
+  width: 433px;
+  height: 44px;
+}
+:deep(.el-input__prefix) {
+  color: gray;
 }
 
 .editWrap__input > div > input:focus {
@@ -54,26 +74,10 @@
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
 
-.editWrap__img {
+.editWrap__profile {
   width: 183px;
   height: 230px;
   text-align: center;
-
-  & div {
-    width: 181px;
-    height: 181px;
-    border: 1px solid #d2d2d2;
-    border-radius: 5px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    position: relative;
-    cursor: pointer;
-    & img {
-      position: absolute;
-      top: 45%;
-      right: 42%;
-    }
-  }
   & label {
     font-family: 'Pretendard-Bold';
     font-size: 16px;
@@ -81,8 +85,28 @@
     height: 32px;
   }
 }
+.editWrap__profile-upload {
+  width: 181px;
+  height: 181px;
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.el-icon {
+  width: 178px;
+  height: 178px;
+  text-align: center;
+  & svg {
+    width: 30px;
+    height: 30px;
+    color: lightgray;
+  }
+}
 
-.save_btn {
+.saveBtn {
   position: relative;
   top: 100px;
   left: 349px;

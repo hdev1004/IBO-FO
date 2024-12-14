@@ -1,10 +1,43 @@
 <script setup lang="ts">
 import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
 import BaseTitle from '@/components/title/BaseTitle.vue'
-import EditSVG from '@/assets/home/empRecord/edit.svg'
 import { ref } from 'vue'
+import type { UploadProps } from 'element-plus'
+import { ElMessage } from 'element-plus'
+import { Picture } from '@element-plus/icons-vue'
 
-const birth = ref(null)
+const birth = ref('')
+const imageUrl = ref('')
+
+const handleProfileSuccess: UploadProps['onSuccess'] = (response, uploadFile) => {
+  imageUrl.value = URL.createObjectURL(uploadFile.raw!)
+}
+
+const beforeProfileUpload: UploadProps['beforeUpload'] = (rawFile) => {
+  if (rawFile.type !== 'image/jpeg') {
+    ElMessage({
+      message: '프로필 이미지는 JPG 형식만 가능합니다.',
+      type: 'error',
+      plain: true
+    })
+  } else if (rawFile.size / 1024 / 1024 > 2) {
+    ElMessage({
+      message: '파일 용량은 2MB를 초과할 수 없습니다.',
+      type: 'error',
+      plain: true
+    })
+    return false
+  }
+  return true
+}
+
+const saveInfo = () => {
+  ElMessage({
+    message: '정보 수정이 완료되었습니다.',
+    type: 'success',
+    plain: true
+  })
+}
 </script>
 
 <template>
@@ -36,17 +69,25 @@ const birth = ref(null)
         </div>
       </div>
 
-      <div class="editWrap__img">
-        <div class="editWrap__img__input">
-          <img :src="EditSVG" />
-        </div>
+      <div class="editWrap__profile">
+        <el-upload
+          class="editWrap__profile-upload"
+          :show-file-list="false"
+          :on-success="handleProfileSuccess"
+          :before-upload="beforeProfileUpload"
+        >
+          <img v-if="imageUrl" :src="imageUrl" class="profileImg" />
+          <el-icon v-else class="profile-upload-icon"><Picture /></el-icon>
+        </el-upload>
+
         <label for="profile">프로필 이미지</label>
       </div>
     </section>
     <BaseBlueButton
       text="저장"
       style="width: 161px; height: 35px"
-      class="save_btn"
+      class="saveBtn"
+      @click="saveInfo"
     ></BaseBlueButton>
   </main>
 </template>
