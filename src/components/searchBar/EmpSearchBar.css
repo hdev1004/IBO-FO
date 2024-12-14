@@ -1,0 +1,19 @@
+.searchBox {
+  height: 45px;
+  padding: 25px 0px 0px 20px;
+}
+
+#empAppointmentList {
+  border-radius: 5px;
+  border: 1px #d2d2d2 solid;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  outline: none;
+  padding-left: 3px;
+  margin-right: 80px;
+}
+
+.appointTitle {
+  margin-right: 20px;
+}

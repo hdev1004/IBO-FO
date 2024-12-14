@@ -1,6 +1,4 @@
 .container {
-  /* max-width: 100%; */
-  /* height: calc(100vh - 281px); */
   max-width: 1608px;
   height: 666px;
   padding: 25px 44px;
@@ -18,6 +16,7 @@ figure {
 .empRecord__info {
   display: flex;
   margin-bottom: 25px;
+  height: 270px;
 }
 .empRecord__info__profileImg {
   margin-right: 50px;
@@ -29,7 +28,7 @@ figure {
   height: 25px;
   position: absolute;
   right: 0px;
-  bottom: 60px;
+  bottom: 78px;
   background-color: #efefef;
   border: 2px solid #717179;
   border-radius: 50px;
@@ -38,10 +37,10 @@ figure {
   justify-content: center;
 }
 .empRecord__info__profileInfo {
-  height: 250px;
+  height: 100%;
 }
 .empRecord__info__profileInfo__info {
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   & p {
     font-family: 'Pretendard-Bold';
     font-size: 30px;
@@ -71,6 +70,7 @@ figure {
     align-content: center;
   }
 }
+
 .icons-telephone,
 .icons-message {
   width: 30px;
@@ -92,6 +92,7 @@ figure {
 }
 .icons-editInfo {
   width: 92px;
+  cursor: pointer;
   & img {
     margin-left: 7px;
     margin-right: 7px;
@@ -99,18 +100,15 @@ figure {
 }
 
 .empRecord__tabs {
-  /* border: 1px solid teal; */
-  height: 388px;
+  height: 368px;
 }
 
 .empRecord__tabs__body {
   padding: 20px;
-  /* border: 1px solid seagreen; */
   height: 301px;
+  width: 1145px;
 }
 .empRecord__tabs__body-show {
-  position: relative;
-  z-index: 1;
   opacity: 1;
 }
 .empRecord__tabs__body-hidden {
