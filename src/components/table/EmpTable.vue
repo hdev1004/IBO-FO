@@ -18,6 +18,9 @@ const props = defineProps({
         :label="item.title"
         :width="item.width"
       >
+        <template #header>
+          <slot :name="`header-${item.key}`" :data="item"> {{ item.title }} </slot>
+        </template>
         <!-- 동적 슬롯을 렌더링 -->
         <template #default="scope">
           <slot :name="item.key" :data="scope.row[item.key]">

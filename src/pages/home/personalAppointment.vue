@@ -10,7 +10,7 @@ const headers = ref<Array<commonTableHeaders>>([
   {
     key: 'seq',
     title: '번호',
-    width: 50
+    width: 100
   },
   {
     key: 'type',

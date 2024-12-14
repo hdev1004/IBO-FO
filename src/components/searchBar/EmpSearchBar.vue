@@ -1,16 +1,43 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { commonSelectOptionsType } from '@/types/index'
+
+const value = ref<string>('')
+const options = ref<Array<commonSelectOptionsType>>([
+  {
+    label: '전체',
+    value: 'all'
+  },
+  {
+    label: '부서이동',
+    value: 'depart'
+  },
+  {
+    label: '승진',
+    value: 'promotion'
+  },
+  {
+    label: '휴직',
+    value: 'rest'
+  },
+  {
+    label: '퇴직',
+    value: 'retire'
+  }
+])
+</script>
 
 <template>
   <section>
     <div class="searchBox">
       <span class="appointTitle">구분</span>
-      <select name="empAppointmentList" id="empAppointmentList">
-        <option value="appointAll">전체</option>
-        <option value="moveDept">부서이동</option>
-        <option value="promote">승진</option>
-        <option value="leave">휴직</option>
-        <option value="retire">퇴직</option>
-      </select>
+      <el-select v-model="value" placeholder="전체" class="empAppointmentList">
+        <el-option
+          v-for="item in options"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value"
+        />
+      </el-select>
 
       <span class="appointTitle">발령일자</span>
       <span>
