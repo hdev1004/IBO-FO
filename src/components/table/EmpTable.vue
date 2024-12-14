@@ -10,7 +10,7 @@ const props = defineProps({
 
 <template>
   <section>
-    <el-table :data="props.data" style="width: 100%">
+    <el-table :data="props.data" class="table">
       <el-table-column
         v-for="item in props.headers"
         :key="item.key"
@@ -30,6 +30,10 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
+.table {
+  width: calc(100% - 40px);
+  margin-left: 20px;
+}
 //모든 셀 가운데 정렬
 :deep(.cell) {
   text-align: center;
@@ -38,6 +42,12 @@ const props = defineProps({
 //테이블 행
 :deep(.el-table__row) {
   height: 60px;
+}
+
+:deep(.el-table__header .el-table__cell:nth-last-child(1) .cell) {
+  &::after {
+    width: 0px;
+  }
 }
 
 //테이블 헤더
