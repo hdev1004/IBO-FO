@@ -5,7 +5,6 @@
   margin-left: 118px;
   margin-right: 118px;
   margin-bottom: 60px;
-  border: 1px solid #d2d2d2;
 }
 .editWrap {
   display: flex;
@@ -49,13 +48,12 @@
   height: 40px;
   border: 1px solid #d2d2d2;
   box-shadow: none;
-  /* box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em; */
   & input::placeholder {
     color: lightgray;
   }
 }
-/* 포커스 스타일 아직 안 먹음 */
-:deep(.el-input--large .el-input__wrapper:focus) {
+
+:deep(.el-input__wrapper.is-focus) {
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
 :deep(.el-input__wrapper > input::placeholder) {

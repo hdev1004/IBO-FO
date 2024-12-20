@@ -9,6 +9,7 @@ import infoTable from './empInfoTab/infoTable.vue'
 import financeTable from './empInfoTab/financeTable.vue'
 import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
 import BaseWhiteButton from '@/components/buttons/BaseWhiteButton.vue'
+import router from '@/router'
 
 let tabs = ['기본정보', '급여정보']
 
@@ -20,6 +21,10 @@ let nowTab = ref({
 const tabChange = (value: any) => {
   console.log(value)
   nowTab.value = value
+}
+
+const register = () => {
+  router.push({ path: '/home/empInfoReg' })
 }
 </script>
 
@@ -153,6 +158,7 @@ const tabChange = (value: any) => {
         <div class="empInfo__mainInfo__infoWrap-btns">
           <BaseBlueButton
             text="등록"
+            @click="register()"
             style="width: 98px; height: 35px; margin-right: 12px; font-size: 14px"
           ></BaseBlueButton>
           <BaseWhiteButton

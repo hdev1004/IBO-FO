@@ -56,7 +56,9 @@ const edit = () => {
               <img :src="TelephoneSVG" />
             </div>
           </el-tooltip>
-          <div class="icons-message"><img :src="MessageSVG" /></div>
+          <el-tooltip :disabled="disabled" content="jgh@ibo.com" placement="top" effect="light">
+            <div class="icons-message" @click="disabled = !disabled"><img :src="MessageSVG" /></div>
+          </el-tooltip>
           <div class="icons-status"><span></span>재직중</div>
           <div class="icons-editInfo" @click="edit()"><img :src="EditInfoSVG" />정보수정</div>
           <BaseBlueButton
