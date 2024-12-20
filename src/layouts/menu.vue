@@ -52,8 +52,8 @@ const clickMenu = (type: string) => {
       <MenuButton
         :ImgSvg="DeleteSvg"
         text="퇴직"
-        @click="clickMenu('retired')"
-        :fill="currentMenu === 'retired' ? '#05153B' : '#717179'"
+        @click="clickMenu('severance')"
+        :fill="currentMenu === 'severance' ? '#05153B' : '#717179'"
       ></MenuButton>
       <MenuButton
         :ImgSvg="QuerySvg"

@@ -18,8 +18,8 @@
     "급여대장": "/payrollRegister",
     "월급 명세서": "/paySlip"
   },
-  "retired": {
-    "퇴직금 산정": "/aa"
+  "severance": {
+    "퇴직금 산정": "/severancePay"
   },
   "faq": {}
 }
