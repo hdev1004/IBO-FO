@@ -58,27 +58,27 @@ const date = ref('')
           <div class="content2">
             <div class="content__item">
               <p class="content__title">계약 연봉</p>
-              <p class="content__desc">2024.09.21</p>
+              <p class="content__desc">30,000,000원</p>
             </div>
             <div class="content__item">
               <p class="content__title">성과급</p>
-              <p class="content__desc">2024.09.21</p>
+              <p class="content__desc">145,111원</p>
             </div>
             <div class="content__item">
               <p class="content__title">상여금</p>
-              <p class="content__desc">2024.09.21</p>
+              <p class="content__desc">300,000원</p>
             </div>
             <div class="content__item">
               <p class="content__title">야근수당</p>
-              <p class="content__desc">2024.09.21</p>
+              <p class="content__desc">0원</p>
             </div>
             <div class="content__item">
               <p class="content__title">연장근로수당</p>
-              <p class="content__desc">2024.09.21</p>
+              <p class="content__desc">0원</p>
             </div>
             <div class="content__item">
               <p class="content__title">평균임금금</p>
-              <p class="content__desc">2024.09.21</p>
+              <p class="content__desc">98,170원</p>
             </div>
           </div>
         </el-collapse-item>
