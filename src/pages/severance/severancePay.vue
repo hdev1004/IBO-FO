@@ -5,6 +5,8 @@ import ProfileSVG from '@/assets/home/empInfo/home_searchProfile.svg'
 import TimeSVG from '@/assets/severance/time.svg'
 import DailySVG from '@/assets/severance/daily.svg'
 import MoneySVG from '@/assets/severance/money.svg'
+
+const date = ref('')
 </script>
 
 <template>
@@ -15,7 +17,7 @@ import MoneySVG from '@/assets/severance/money.svg'
         <p>허광한</p>
       </figure>
       <div class="severance__header__additional">
-        <BaseBlueButton text="인쇄하기" style="height: 33px" font-size="15px"></BaseBlueButton>
+        <BaseBlueButton text="인쇄하기" style="height: 28px" font-size="14px"></BaseBlueButton>
         <p>입사일 : 2024.09.21</p>
       </div>
     </section>
@@ -26,13 +28,26 @@ import MoneySVG from '@/assets/severance/money.svg'
             <img :src="TimeSVG" class="collaps_icon" />
             근무시간 산정
           </template>
-          <div>
-            Consistent with real life: in line with the process and logic of real life, and comply
-            with languages and habits that the users are used to;
-          </div>
-          <div>
-            Consistent within interface: all elements should be consistent, such as: design style,
-            icons and texts, position of elements, etc.
+          <div class="content1">
+            <div class="content__item">
+              <p class="content__title">입사일</p>
+              <p class="content__desc">2024.09.21</p>
+            </div>
+            <div class="content__item">
+              <p class="content__title">퇴사 예정일</p>
+              <el-date-picker
+                v-model="date"
+                class="content__desc"
+                type="date"
+                size="midium"
+                placeholder="일자를 선택하세요"
+              />
+            </div>
+            <div class="content__item">
+              <p class="content__title">근무 시간</p>
+              <p class="content__desc">91일</p>
+              <span class="refer">* 퇴사 예정일 미선택시 오늘날 기준</span>
+            </div>
           </div>
         </el-collapse-item>
         <el-collapse-item name="2">
@@ -40,13 +55,31 @@ import MoneySVG from '@/assets/severance/money.svg'
             <img :src="DailySVG" class="collaps_icon" />
             1일 평균임금
           </template>
-          <div>
-            Operation feedback: enable the users to clearly persceive their operations by style
-            updates and interactive effects;
-          </div>
-          ``
-          <div>
-            Visual feedback: reflect current state by updating or rearranging elements of the page.
+          <div class="content2">
+            <div class="content__item">
+              <p class="content__title">계약 연봉</p>
+              <p class="content__desc">2024.09.21</p>
+            </div>
+            <div class="content__item">
+              <p class="content__title">성과급</p>
+              <p class="content__desc">2024.09.21</p>
+            </div>
+            <div class="content__item">
+              <p class="content__title">상여금</p>
+              <p class="content__desc">2024.09.21</p>
+            </div>
+            <div class="content__item">
+              <p class="content__title">야근수당</p>
+              <p class="content__desc">2024.09.21</p>
+            </div>
+            <div class="content__item">
+              <p class="content__title">연장근로수당</p>
+              <p class="content__desc">2024.09.21</p>
+            </div>
+            <div class="content__item">
+              <p class="content__title">평균임금금</p>
+              <p class="content__desc">2024.09.21</p>
+            </div>
           </div>
         </el-collapse-item>
         <el-collapse-item name="3">

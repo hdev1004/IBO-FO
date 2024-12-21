@@ -54,7 +54,7 @@
 }
 
 :deep(.el-input__wrapper.is-focus) {
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  border: 1px solid #409eff;
 }
 :deep(.el-input__wrapper > input::placeholder) {
   color: gray;
@@ -69,7 +69,7 @@
 
 .editWrap__input > div > input:focus {
   outline: none;
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  border: 1px solid #409eff;
 }
 
 .editWrap__profile {
@@ -92,6 +92,9 @@
   margin-bottom: 20px;
   position: relative;
   cursor: pointer;
+}
+.editWrap__profile-upload:focus {
+  border: 1px solid #409eff;
 }
 .el-icon {
   width: 178px;

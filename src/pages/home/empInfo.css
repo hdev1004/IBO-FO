@@ -27,7 +27,7 @@
   justify-content: space-evenly;
   margin-top: 6%;
   margin-bottom: 4%;
-  border: 1px solid #d2d2d2;
+  border: 1px solid #dddddd;
   border-radius: 5px;
   & span {
     font-size: 14px;
@@ -40,25 +40,26 @@
 }
 
 .empInfo__searchInfo__empSearch {
-  width: 88%;
+  width: 353px;
   height: 5%;
   margin-bottom: 8%;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
   position: relative;
-  & input {
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-    text-indent: 13px;
-    font-size: 14px;
-  }
+  border-radius: 5px;
+  text-indent: 13px;
+  font-size: 14px;
 }
+.empInfo__searchInfo > input:focus {
+  outline: none;
+  border: 1px solid #409eff;
+}
+
 .empInfo__searchInfo__empSearch-searchBtn {
   position: absolute;
-  right: 13px;
-  top: 35%;
   cursor: pointer;
+  left: 475px;
+  top: 210px;
 }
 
 .empInfo__searchInfo__empCards {

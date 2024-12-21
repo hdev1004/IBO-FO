@@ -39,10 +39,15 @@ const register = () => {
         <div class="v-line"></div>
         <span>퇴사 3</span>
       </div>
-      <div class="empInfo__searchInfo__empSearch">
-        <input type="text" maxlength="10" placeholder="사원명 또는 사번을 입력하세요" />
+
+      <input
+        class="empInfo__searchInfo__empSearch"
+        type="text"
+        maxlength="10"
+        placeholder="사원명 또는 사번을 입력하세요">
         <img :src="SearchSVG" class="empInfo__searchInfo__empSearch-searchBtn" />
-      </div>
+      </input>
+
 
       <!-- 등록된 사원 정보가 없으면 "등록된 정보가 없습니다." 로 보여져야 함함 -->
       <article class="empInfo__searchInfo__empCards">
