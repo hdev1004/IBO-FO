@@ -84,5 +84,5 @@ const tableData = [
 </template>
 
 <style lang="scss" scoped>
-@import url(./personalAppointment.css);
+@import url('./personalAppointment.css');
 </style>
