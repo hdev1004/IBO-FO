@@ -17,6 +17,8 @@ declare module 'vue' {
     BaseWhiteMoveBtn: typeof import('./src/components/buttons/BaseWhiteMoveBtn.vue')['default']
     BlueDownloadButton: typeof import('./src/components/buttons/BlueDownloadButton.vue')['default']
     DayOffBlueButton: typeof import('./src/components/buttons/DayOffBlueButton.vue')['default']
+    EmpSearchBar: typeof import('./src/components/searchBar/EmpSearchBar.vue')['default']
+    EmpTable: typeof import('./src/components/table/EmpTable.vue')['default']
     Header: typeof import('./src/layouts/header.vue')['default']
     LineTab: typeof import('./src/components/tab/LineTab.vue')['default']
     Menu: typeof import('./src/layouts/menu.vue')['default']

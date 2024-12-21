@@ -1,16 +1,36 @@
 <script setup lang="ts">
-import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
+import BlueDownloadButton from '@/components/buttons/BlueDownloadButton.vue'
+import type { commonTableHeaders } from '@/types/index'
+import router from '@/router'
 
-interface User {
-  empList: string
-  empName: string
-  totalPay: string
-  realPay: string
-  minusPay: string
-  download: string
-}
+const headers = ref<Array<commonTableHeaders>>([
+  {
+    key: 'empList',
+    title: '부서'
+  },
+  {
+    key: 'empName',
+    title: '이름'
+  },
+  {
+    key: 'totalPay',
+    title: '실지급액'
+  },
+  {
+    key: 'realPay',
+    title: '지급총액'
+  },
+  {
+    key: 'minusPay',
+    title: '공제총액'
+  },
+  {
+    key: 'download',
+    title: '급여명세서'
+  }
+])
 
-const tableData: User[] = [
+const tableData = [
   {
     empList: '정보보안부서',
     empName: '장서온',
@@ -37,21 +57,25 @@ const tableData: User[] = [
     </div>
     <div class="buttonArea">
       <BaseBlueButton width="70px" height="35px" font-size="14px" text="검색"></BaseBlueButton>
+      <BaseBlueButton
+        class="sendMail"
+        width="180px"
+        height="35px"
+        font-size="14px"
+        text="급여명세서 이메일 발송"
+      ></BaseBlueButton>
     </div>
   </form>
   <main class="container">
-    <el-table
-      :data="tableData"
-      :default-sort="{ prop: 'date', order: 'descending' }"
-      style="width: 100%"
-    >
-      <el-table-column prop="empList" label="부서" width="180" />
-      <el-table-column prop="empName" label="이름" width="180" />
-      <el-table-column prop="totalPay" label="실지급액" sortable width="180" />
-      <el-table-column prop="realPay" label="지급총액" />
-      <el-table-column prop="minusPay" label="공제총액" width="180" />
-      <el-table-column prop="download" label="급여명세서" width="180" />
-    </el-table>
+    <EmpTable :headers="headers" :data="tableData">
+      <template #download="{ data }">
+        <BlueDownloadButton
+          width="180px"
+          height="30px"
+          style="margin-left: 30px"
+        ></BlueDownloadButton>
+      </template>
+    </EmpTable>
   </main>
 </template>
 

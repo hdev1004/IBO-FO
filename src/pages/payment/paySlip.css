@@ -35,7 +35,7 @@
   height: 36px;
   background-color: white;
   outline: none;
-  padding-left: 5px;
+  padding-left: 10px;
   margin-right: 80px;
   font-size: 14px;
 }
@@ -45,6 +45,10 @@
   display: flex;
   margin-top: -39px;
   margin-left: 570px;
+}
+
+.buttonArea > .sendMail {
+  margin-left: 895px;
 }
 
 :deep(.el-table__header) {
