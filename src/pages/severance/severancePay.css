@@ -58,15 +58,16 @@ figure {
   font-size: 15px;
 }
 .content1 > .content__item > .content__title {
-  width: 80px;
-  text-align: right;
-  margin-right: 100px;
+  width: 120px;
+  margin-right: 60px;
+  text-align: left;
+
   color: #717179;
 }
 .content1 > .content__item:nth-child(4) {
   position: absolute;
 }
-.content1 > .content__item > .content__desc {
+.content1 > .content__item > .content__detail {
   color: #222222;
 }
 .content1 > .content__item > .refer {
@@ -77,11 +78,54 @@ figure {
 }
 
 .content2 > .content__item > .content__title {
-  width: 80px;
-  text-align: right;
-  margin-right: 100px;
+  width: 120px;
+  text-align: left;
+  margin-right: 30px;
   color: #717179;
 }
-.content2 > .content__item > .content__desc {
+.content2 > .content__item > .content__detail {
+  width: 120px;
+  text-align: right;
   color: #222222;
+}
+.content2 > .content__item > .content__desc {
+  margin-left: 30px;
+  color: #717179;
+}
+
+.content3 > .content__item > .content__title {
+  width: 120px;
+  text-align: left;
+  margin-right: 30px;
+  color: #717179;
+}
+.content3 > .content__item > .content__detail {
+  width: 120px;
+  text-align: right;
+  color: #222222;
+}
+.content3 > .content__item > .content__desc {
+  margin-left: 30px;
+  color: #717179;
+}
+
+.content4 > .content__item > .content__title {
+  width: 120px;
+  display: flex;
+  text-align: left;
+  align-items: center;
+  color: #717179;
+  margin-right: 30px;
+}
+.content4 > .content__item > .content__title > .el-icon {
+  margin-left: 10px;
+}
+.content4 > .content__item > .content__detail {
+  width: 120px;
+  text-align: right;
+  color: #222222;
+}
+.content4 > .content__item > .content__desc {
+  margin-left: 30px;
+  color: #717179;
 }
