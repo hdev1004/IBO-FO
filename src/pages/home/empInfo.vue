@@ -26,6 +26,10 @@ const tabChange = (value: any) => {
 const register = () => {
   router.push({ path: '/home/empInfoReg' })
 }
+
+const edit = () => {
+  router.push({ path: '/home/empInfoReg' })
+}
 </script>
 
 <template>
@@ -44,12 +48,11 @@ const register = () => {
         class="empInfo__searchInfo__empSearch"
         type="text"
         maxlength="10"
-        placeholder="사원명 또는 사번을 입력하세요">
-        <img :src="SearchSVG" class="empInfo__searchInfo__empSearch-searchBtn" />
-      </input>
+        placeholder="사원명 또는 사번을 입력하세요"
+      />
+      <img :src="SearchSVG" class="empInfo__searchInfo__empSearch-searchBtn" />
 
-
-      <!-- 등록된 사원 정보가 없으면 "등록된 정보가 없습니다." 로 보여져야 함함 -->
+      <!-- 등록된 사원 정보가 없으면 "등록된 정보가 없습니다." 로 보여져야 함 -->
       <article class="empInfo__searchInfo__empCards">
         <div class="empInfo__searchInfo__empCards__ordering">
           <span>등록순</span>
@@ -144,6 +147,7 @@ const register = () => {
       </article>
     </section>
     <section class="empInfo__mainInfo">
+      <!-- 등록된 사원 정보가 없으면 "등록된 정보가 없습니다. 정보를 등록해주세요." 로 보여져야 함 -->
       <figure class="empInfo__mainInfo__profile">
         <img :src="MainProfileSVG" class="empInfo__mainInfo__profile__img" />
         <div class="empInfo__mainInfo__profile__info">
@@ -157,7 +161,6 @@ const register = () => {
           </ul>
         </div>
       </figure>
-
       <article class="empInfo__mainInfo__infoWrap">
         <BaseTab :tabs="tabs" @tabChange="tabChange"></BaseTab>
         <div class="empInfo__mainInfo__infoWrap-btns">
@@ -168,6 +171,7 @@ const register = () => {
           ></BaseBlueButton>
           <BaseWhiteButton
             text="수정"
+            @click="edit()"
             style="width: 98px; height: 35px; font-size: 14px"
           ></BaseWhiteButton>
         </div>

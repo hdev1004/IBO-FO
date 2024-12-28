@@ -1,0 +1,36 @@
+.document__header {
+  display: flex;
+  height: 50px;
+  /* border: 1px solid saddlebrown; */
+  align-items: center;
+  justify-content: space-between;
+}
+.document__header-paging {
+  display: flex;
+  align-items: center;
+  & p {
+    font-size: 15px;
+    margin-right: 15px;
+  }
+}
+.document__header-search {
+  position: relative;
+  & input {
+    width: 200px;
+    height: 28px;
+    outline: none;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    text-indent: 13px;
+    font-size: 14px;
+  }
+  & img {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+  }
+}
+.document__header-search > input:focus {
+  border: 1px solid #409eff;
+}

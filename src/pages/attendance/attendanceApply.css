@@ -1,0 +1,21 @@
+.conatiner {
+  max-width: 1608px;
+  height: 714px;
+  /* padding: 25px 44px; */
+  margin-left: 118px;
+  margin-right: 118px;
+  margin-bottom: 60px;
+}
+.document__body {
+  padding: 20px;
+  height: 639px;
+  width: 1560px;
+  background-color: #fff;
+  border: 1px solid #d2d2d2;
+  border-radius: 0px 5px 5px 5px;
+}
+.document__body-hidden {
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+}
