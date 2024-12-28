@@ -24,23 +24,23 @@ const tableData = ref([
 const headers = ref([
   {
     key: 'lv1',
-    title: 'lv1'
+    title: 'LV1'
   },
   {
     key: 'lv2',
-    title: 'lv2'
+    title: 'LV2'
   },
   {
     key: 'lv3',
-    title: 'lv3'
+    title: 'LV3'
   },
   {
     key: 'lv4',
-    title: 'lv4'
+    title: 'LV4'
   },
   {
     key: 'lv5',
-    title: 'lv5'
+    title: 'LV5'
   }
 ])
 
