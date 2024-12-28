@@ -61,7 +61,7 @@ const props = defineProps({
     width: 1px;
     right: 0px;
     bottom: 10px;
-    background-color: #d2d2d2;
+    background-color: #ebeef5;
     height: 30px;
   }
   color: black;
