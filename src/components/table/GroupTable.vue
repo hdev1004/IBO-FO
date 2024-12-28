@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import type { commonTableHeaders } from '@/types/index'
-
-interface level {
-  lv1: string
-  lv2: string
-  lv3: string
-  lv4: string
-  lv5: string
-}
+import type { commonTableHeaders, level } from '@/types/index'
 
 const props = defineProps({
   headers: Array<commonTableHeaders>,
@@ -91,7 +83,10 @@ const getLevelNumber = (data: Array<level>, level: number) => {
 
 // 셀 병합 함수
 const mergeCells = ({ row, column, rowIndex, columnIndex }: any) => {
-  let levels = ['lv1', 'lv2', 'lv3', 'lv4', 'lv5']
+  let headers = props.headers?.map((h) => h.key)
+  if (!headers) return
+
+  let levels = headers
   if (!props.data) return
 
   for (let lv = 0; lv < levels.length; lv++) {
@@ -111,18 +106,44 @@ tableDataSpan()
 <template>
   <section style="height: 100%">
     <el-table :data="data" :span-method="mergeCells" class="table">
-      <el-table-column prop="lv1" label="LV1">
+      <el-table-column
+        :prop="header.key"
+        :label="header.title"
+        v-for="header in headers"
+        :key="header.key"
+      >
         <template #header>
-          <slot :name="`header-lv1`"> LV1</slot>
+          <slot :name="`header-${header.key}`">
+            <div class="table-header">
+              <div>{{ header.title }}</div>
+              <span class="table-header-icon">
+                <el-icon><Plus /></el-icon>
+              </span>
+            </div>
+          </slot>
         </template>
         <template #default="scope">
-          <slot :name="'lv1'" :data="scope.row['lv1']"> {{ scope.row['lv1'] }} . . . </slot>
+          <slot :name="header.key" :data="scope?.row[header.key]">
+            <div class="table-row">
+              <div>{{ scope?.row[header.key] }}</div>
+              <el-dropdown class="table-dropdown">
+                <span class="el-dropdown-link"
+                  ><el-icon><MoreFilled /></el-icon>
+                </span>
+                <template #dropdown>
+                  <el-dropdown-menu>
+                    <el-dropdown-item>하위조직생성</el-dropdown-item>
+                    <el-dropdown-item>조직 순서 변경</el-dropdown-item>
+                    <el-dropdown-item>조직 이동</el-dropdown-item>
+                    <el-dropdown-item>명칭 변경</el-dropdown-item>
+                    <el-dropdown-item>삭제하기</el-dropdown-item>
+                  </el-dropdown-menu>
+                </template>
+              </el-dropdown>
+            </div>
+          </slot>
         </template>
       </el-table-column>
-      <el-table-column prop="lv2" label="LV2" />
-      <el-table-column prop="lv3" label="LV3" />
-      <el-table-column prop="lv4" label="LV4" />
-      <el-table-column prop="lv5" label="LV5" />
     </el-table>
   </section>
 </template>
@@ -180,5 +201,27 @@ tableDataSpan()
   color: black;
   height: 30px;
   line-height: 30px;
+}
+
+.table-row {
+  position: relative;
+}
+.table-dropdown {
+  position: absolute;
+  right: 40px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.table-header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.table-header-icon {
+  position: absolute;
+  right: 40px;
+  top: 2px;
+  cursor: pointer;
 }
 </style>
