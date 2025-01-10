@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import BaseBlueButton from '@/components/buttons/BaseBlueButton.vue'
 import BaseWhiteButton from '@/components/buttons/BaseWhiteButton.vue'
+import { DayOffBlueBtn } from '@/components/buttons/DayOffBlueButton.stories'
+import DayOffBlueButton from '@/components/buttons/DayOffBlueButton.vue'
 import EmpSearchBar from '@/components/searchBar/EmpSearchBar.vue'
 import EmpTable from '@/components/table/EmpTable.vue'
 import type { commonTableHeaders } from '@/types/index'
