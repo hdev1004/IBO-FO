@@ -11,8 +11,8 @@
   "attendance": {
     "근무/휴가 처리": "/attendanceWork",
     "내 신청 문서": "/attendanceApply",
-    "내 결재 문서": "/cc",
-    "내 참조 문서": "/dd"
+    "내 결재 문서": "/attendanceSign",
+    "내 참조 문서": "/attendanceCC"
   },
   "payment": {
     "급여대장": "/payrollRegister",

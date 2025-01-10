@@ -45,17 +45,17 @@ const headers = ref<Array<commonTableHeaders>>([
 
 const tableData = [
   {
-    docNumber: 'A팀-휴가-20250109-001',
+    docNumber: 'A팀-휴가-20240919-001',
     docType: '휴가신청서',
-    term: '2025-01-09(목) ~ 2025-01-10(금) 2일',
+    term: '2024-09-19(목) ~ 2024-09-20(금) 2일',
     type: '',
-    status: ''
+    status: '허광한  09-12 01:27 PM'
   }
 ]
 </script>
 
 <template>
-  <main class="approval__container">
+  <main class="apply__container">
     <section class="document__header">
       <div class="document__header-paging">
         <p>목록 개수</p>
@@ -79,7 +79,6 @@ const tableData = [
           <DayOffBlueButton width="100px" height="30px" style="margin-left: 30%"></DayOffBlueButton>
         </template>
         <template #status="{ data }">
-          <span style="display: block; align-content: center">허광한 09-12 01:27 PM</span>
           <BaseWhiteButton
             text="상세보기"
             width="70px"
@@ -93,5 +92,5 @@ const tableData = [
 </template>
 
 <style lang="scss" scoped>
-@import url('./applyApproval.css');
+@import url('./CCApproval.css');
 </style>

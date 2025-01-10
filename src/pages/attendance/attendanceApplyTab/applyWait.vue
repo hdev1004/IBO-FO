@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import SearchSVG from '@/assets/home/empInfo/search.svg'
+import BaseWhiteButton from '@/components/buttons/BaseWhiteButton.vue'
+import DayOffBlueButton from '@/components/buttons/DayOffBlueButton.vue'
+import type { commonTableHeaders } from '@/types/index'
 
 const paging = ref(null)
 const pagingOptions = [
@@ -45,8 +48,8 @@ const tableData = [
     docNumber: 'A팀-휴가-20240919-001',
     docType: '휴가신청서',
     term: '2024-09-19(목) ~ 2024-09-20(금) 2일',
-    type: '연차 - 종일',
-    status: '허광한  09-12 01:27 PM'
+    type: '',
+    status: ''
   }
 ]
 </script>
@@ -71,7 +74,20 @@ const tableData = [
       </div>
     </section>
     <section class="document__table">
-      <EmpTable :headers="headers" :data="tableData"> </EmpTable>
+      <EmpTable :headers="headers" :data="tableData">
+        <template #type="{ data }">
+          <DayOffBlueButton width="100px" height="30px" style="margin-left: 30%"></DayOffBlueButton>
+        </template>
+        <template #status="{ data }">
+          <span style="display: block; align-content: center">허광한 09-12 01:27 PM</span>
+          <BaseWhiteButton
+            text="상세보기"
+            width="70px"
+            height="30px"
+            style="float: right; display: flex"
+          ></BaseWhiteButton>
+        </template>
+      </EmpTable>
     </section>
   </main>
 </template>
