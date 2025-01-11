@@ -4,6 +4,7 @@ import { homeRouter } from './home'
 import { scheduleRouter } from './schedule'
 import { paymentRouter } from './payment'
 import { severanceRouter } from './severance'
+import { faqRouter } from './faq'
 
 export default [
   {
@@ -31,5 +32,6 @@ export default [
   ...scheduleRouter,
   ...attendanceRouter,
   ...paymentRouter,
-  ...severanceRouter
+  ...severanceRouter,
+  ...faqRouter
 ]

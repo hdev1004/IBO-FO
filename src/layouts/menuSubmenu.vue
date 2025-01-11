@@ -16,12 +16,12 @@ const props = defineProps({
 })
 
 const menuClick = (obj: any, item: string) => {
-  console.log('Obj : ', obj[item])
+  //console.log('Obj : ', obj[item])
   const url = obj[item]
   router.push(`/${props.currentMenu}${url}`)
 }
 
-console.log('Current : ', props.currentMenu)
+//console.log('Current : ', props.currentMenu)
 </script>
 
 <template>

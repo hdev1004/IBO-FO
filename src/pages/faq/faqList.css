@@ -1,0 +1,58 @@
+.container {
+  max-width: 1608px;
+  height: 666px;
+  margin-left: 118px;
+  margin-right: 118px;
+  margin-bottom: 60px;
+}
+
+.faq-body {
+  position: relative;
+  border: 1px solid lightgray;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 0px 5px 5px 5px;
+  height: 100%;
+  background-color: white;
+}
+
+.faq-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.faq-search {
+  margin-right: 40px;
+  width: 140px;
+}
+
+.faq-search-input {
+  width: 300px;
+}
+
+.faq-search-btn {
+  position: absolute;
+  right: 0px;
+}
+
+.faq-line {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.collapse {
+  height: calc(100% - 150px);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+}

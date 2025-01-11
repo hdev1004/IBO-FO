@@ -45,6 +45,29 @@ const headers = ref([
   }
 ])
 
+const tableData2 = ref([
+  {
+    date: '2025-01-01',
+    emp: 'J001',
+    comments: '이동'
+  },
+  {
+    date: '2025-01-02',
+    emp: 'J002',
+    comments: '이동'
+  },
+  {
+    date: '2025-01-03',
+    emp: 'J003',
+    comments: '이동'
+  },
+  {
+    date: '2025-01-04',
+    emp: 'J004',
+    comments: '이동'
+  }
+])
+
 let tabs = ['조직도 관리', '직책 관리']
 
 let nowTab = ref({
@@ -63,29 +86,32 @@ const tabChange = (value: any) => {
     <BaseTitle text="조직관리" style="margin-top: 60px; margin-left: 118px"></BaseTitle>
     <div class="group-body">
       <BaseTab :tabs="tabs" @tabChange="tabChange"> </BaseTab>
-      <div class="tab-body" v-if="nowTab.tab === '조직도 관리'">
-        <GroupTable :headers="headers" :data="tableData"></GroupTable>
-      </div>
+      <div class="tab-body">
+        <GroupTable
+          :headers="headers"
+          :data="tableData"
+          :class="nowTab.tab === '조직도 관리' ? '' : 'hidden'"
+        ></GroupTable>
 
-      <div class="tab-body" v-else>
-        <div class="body-title">
-          <div class="body-contents">
-            *직책은 자유롭게 생성 가능하며, 순서 이동으로 직책의 상하를 구분할 수 있습니다.
+        <section :class="nowTab.tab === '직책 관리' ? '' : 'hidden'">
+          <div class="body-title">
+            <div class="body-contents">
+              *직책은 자유롭게 생성 가능하며, 순서 이동으로 직책의 상하를 구분할 수 있습니다.
+            </div>
+            <BaseBlueButton
+              class="add-btn"
+              text="신규 직책 추가"
+              fontSize="14px"
+              height="30px"
+              width="120px"
+            ></BaseBlueButton>
           </div>
-          <BaseBlueButton
-            class="add-btn"
-            text="신규 직책 추가"
-            fontSize="14px"
-            height="30px"
-            width="120px"
-          ></BaseBlueButton>
-        </div>
-        <el-table>
-          <el-table-column prop="date" label="직책명"></el-table-column>
-          <el-table-column prop="emp" label="직책코드"></el-table-column>
-          <el-table-column prop="name" label="직책설명"></el-table-column>
-          <el-table-column prop="comments" label="비고"></el-table-column>
-        </el-table>
+          <el-table :data="tableData2" style="width: 100%">
+            <el-table-column prop="date" label="직책명"></el-table-column>
+            <el-table-column prop="emp" label="직책코드"></el-table-column>
+            <el-table-column prop="comments" label="비고"></el-table-column>
+          </el-table>
+        </section>
       </div>
     </div>
   </section>

@@ -21,5 +21,7 @@
   "severance": {
     "퇴직금 산정": "/severancePay"
   },
-  "faq": {}
+  "faq": {
+    "문의 목록": "/faqList"
+  }
 }
