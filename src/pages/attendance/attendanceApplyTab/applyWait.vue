@@ -2,9 +2,11 @@
 import SearchSVG from '@/assets/home/empInfo/search.svg'
 import BaseWhiteButton from '@/components/buttons/BaseWhiteButton.vue'
 import DayOffBlueButton from '@/components/buttons/DayOffBlueButton.vue'
+import VacationApplication from '@/components/modal/VacationApplication.vue'
 import type { commonTableHeaders } from '@/types/index'
 
 const paging = ref(null)
+const dialogFormVisible = ref(false)
 const pagingOptions = [
   {
     value: '5',
@@ -79,13 +81,15 @@ const tableData = [
           <DayOffBlueButton width="100px" height="30px" style="margin-left: 30%"></DayOffBlueButton>
         </template>
         <template #status="{ data }">
-          <span style="display: block; align-content: center">허광한 09-12 01:27 PM</span>
+          <span class="status__title">허광한 09-12 01:27 PM</span>
           <BaseWhiteButton
             text="상세보기"
             width="70px"
             height="30px"
             style="float: right; display: flex"
+            @click="dialogFormVisible = true"
           ></BaseWhiteButton>
+          <VacationApplication v-model:visible="dialogFormVisible"></VacationApplication>
         </template>
       </EmpTable>
     </section>

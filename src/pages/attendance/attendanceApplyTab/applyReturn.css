@@ -34,7 +34,10 @@
 .document__header-search > input:focus {
   border: 1px solid #409eff;
 }
-
+.status__title {
+  display: block;
+  align-content: center;
+}
 :deep(.el-table__row > td:nth-child(5) > .cell) {
   display: flex;
   justify-content: space-evenly;

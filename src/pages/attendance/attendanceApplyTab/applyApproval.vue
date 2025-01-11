@@ -79,7 +79,7 @@ const tableData = [
           <DayOffBlueButton width="100px" height="30px" style="margin-left: 30%"></DayOffBlueButton>
         </template>
         <template #status="{ data }">
-          <span style="display: block; align-content: center">허광한 09-12 01:27 PM</span>
+          <span class="status__title">허광한 09-12 01:27 PM</span>
           <BaseWhiteButton
             text="상세보기"
             width="70px"
