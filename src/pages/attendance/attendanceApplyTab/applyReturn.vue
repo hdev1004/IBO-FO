@@ -4,6 +4,11 @@ import BaseWhiteButton from '@/components/buttons/BaseWhiteButton.vue'
 import DayOffBlueButton from '@/components/buttons/DayOffBlueButton.vue'
 import type { commonTableHeaders } from '@/types/index'
 
+const props = defineProps<{
+  openModal: () => void
+  closeModal: () => void
+}>()
+
 const paging = ref(null)
 const pagingOptions = [
   {
@@ -79,12 +84,12 @@ const tableData = [
           <DayOffBlueButton width="100px" height="30px" style="margin-left: 30%"></DayOffBlueButton>
         </template>
         <template #status="{ data }">
-          <span class="status__title">허광한 09-12 01:27 PM</span>
+          <span class="status__title">허광한 09-12 01:3 PM</span>
           <BaseWhiteButton
+            @click="props.openModal()"
             text="상세보기"
             width="70px"
             height="30px"
-            style="float: right"
           ></BaseWhiteButton>
         </template>
       </EmpTable>
