@@ -19,3 +19,18 @@
   z-index: 0;
   opacity: 0;
 }
+
+:deep(.el-overlay-dialog > .el-dialog) {
+  height: 531px;
+  padding: 30px;
+}
+
+:deep(.el-dialog__header) {
+  font-family: 'Pretendard-Bold';
+  font-size: 18px;
+}
+
+:deep(.el-dialog__body) {
+  padding: 10px 30px;
+  height: 365px;
+}
