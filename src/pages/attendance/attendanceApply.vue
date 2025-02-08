@@ -65,67 +65,91 @@ const handleClose = (done: () => void) => {
       // catch error
     })
 }
+
+const VacationDialog = {
+  height: '531px',
+  padding: '30px'
+}
 </script>
 
 <template>
   <el-dialog
     v-model="dialogVisible"
-    class="mmm"
+    class="VacationDialog"
     title="Tips"
     width="598"
     :before-close="handleClose"
+    :style="VacationDialog"
   >
-    <template #title>휴가신청서</template>
+    <template #title>
+      <div class="dialogTitle">휴가신청서</div>
+    </template>
     <template #default>
-      <div class="options">
-        <label>유형</label>
-        <el-select v-model="vacationType" placeholder="선택" style="width: 386px">
-          <el-option
-            v-for="item in vacationOptions"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value"
+      <div class="dialogContent">
+        <div class="options">
+          <label>유형</label>
+          <el-select v-model="vacationType" placeholder="선택" style="width: 386px">
+            <el-option
+              v-for="item in vacationOptions"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value"
+            />
+          </el-select>
+        </div>
+        <div class="date">
+          <label>휴가 기간</label>
+          <el-date-picker
+            style="width: 410px"
+            v-model="vacationDate"
+            type="daterange"
+            start-placeholder="시작일"
+            end-placeholder="종료일"
           />
-        </el-select>
-      </div>
-      <div class="date">
-        <label>휴가 기간</label>
-        <el-date-picker
-          style="width: 430px"
-          v-model="vacationDate"
-          type="daterange"
-          start-placeholder="시작일"
-          end-placeholder="종료일"
-        />
-      </div>
-      <div class="reason">
-        <label>사유</label>
-        <el-input
-          v-model="vacationReason"
-          maxlength="500"
-          height="100"
-          style="width: 450px"
-          placeholder="사유를 입력하세요."
-          show-word-limit
-          type="textarea"
-          resize="none"
-          :autosize="{ minRows: 5, maxRows: 5 }"
-        />
-      </div>
-      <div class="attachment">
-        <label>첨부</label>
-        <BlueDownloadButton
-          text="항공권예약.jpg"
-          font-size="11px"
-          width="107px"
-          height="26px"
-        ></BlueDownloadButton>
+        </div>
+        <div class="reason">
+          <label>사유</label>
+          <el-input
+            v-model="vacationReason"
+            maxlength="500"
+            style="width: 430px; max-height: 100px"
+            placeholder="사유를 입력하세요."
+            show-word-limit
+            type="textarea"
+            resize="none"
+            :autosize="{ minRows: 5, maxRows: 5 }"
+          />
+        </div>
+        <div class="attachment">
+          <label>첨부</label>
+          <div class="attachment_btns">
+            <BlueDownloadButton
+              text="항공권예약.jpg"
+              font-size="11px"
+              width="107px"
+              height="26px"
+              style="margin-right: 15px"
+            ></BlueDownloadButton>
+            <BlueDownloadButton
+              text="항공권예약.jpg"
+              font-size="11px"
+              width="107px"
+              height="26px"
+            ></BlueDownloadButton>
+          </div>
+        </div>
       </div>
     </template>
 
     <template #footer>
-      <div style="display: flex; justify-content: flex-end">
-        <BaseRedButton text="반려" width="65px" height="30px" font-size="12px" />
+      <div class="dialogBtns">
+        <BaseRedButton
+          text="반려"
+          width="65px"
+          height="30px"
+          font-size="12px"
+          style="margin-right: 15px"
+        />
         <BaseBlueButton text="결재" width="65px" height="30px" font-size="12px" />
       </div>
     </template>
