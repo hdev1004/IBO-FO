@@ -5,8 +5,12 @@ import DayOffBlueButton from '@/components/buttons/DayOffBlueButton.vue'
 import VacationApplication from '@/components/modal/VacationApplication.vue'
 import type { commonTableHeaders } from '@/types/index'
 
+const props = defineProps<{
+  openModal: () => void
+  closeModal: () => void
+}>()
+
 const paging = ref(null)
-const dialogFormVisible = ref(false)
 const pagingOptions = [
   {
     value: '5',
@@ -47,9 +51,9 @@ const headers = ref<Array<commonTableHeaders>>([
 
 const tableData = [
   {
-    docNumber: 'A팀-휴가-20240919-001',
-    docType: '휴가신청서',
-    term: '2024-09-19(목) ~ 2024-09-20(금) 2일',
+    docNumber: 'A팀-근태-20250127-002',
+    docType: '근태신청서',
+    term: '2025-01-27(목) ~ 2025-01-27(목) 1일',
     type: '',
     status: ''
   }
@@ -83,13 +87,12 @@ const tableData = [
         <template #status="{ data }">
           <span class="status__title">허광한 09-12 01:27 PM</span>
           <BaseWhiteButton
+            @click="props.openModal()"
             text="상세보기"
             width="70px"
             height="30px"
             style="float: right; display: flex"
-            @click="dialogFormVisible = true"
           ></BaseWhiteButton>
-          <VacationApplication v-model:visible="dialogFormVisible"></VacationApplication>
         </template>
       </EmpTable>
     </section>

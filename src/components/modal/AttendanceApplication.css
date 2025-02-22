@@ -26,31 +26,23 @@
   justify-content: space-between;
   align-items: center;
 }
-.date {
-  height: 60px;
-  align-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
-}
-.reason {
-  height: 130px;
-  align-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
-}
-:deep(textarea.el-textarea__inner) {
-  min-height: 100px !important;
-  height: 100px !important;
+:deep(.el-radio) {
+  margin-right: 39px;
 }
 
-.attachment {
-  height: 50px;
+.date {
+  height: 30px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 }
-.attachment_btns {
+.title {
+  height: 30px;
+  align-content: space-between;
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .dialogBtns {
